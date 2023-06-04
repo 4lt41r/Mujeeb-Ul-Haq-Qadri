@@ -13,6 +13,20 @@
       padding: 20px;
     }
 
+    .container {
+      opacity: 0;
+      animation: fadeContent 1s forwards;
+    }
+
+    @keyframes fadeContent {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
     h1 {
       color: #333;
       font-size: 24px;
@@ -47,131 +61,164 @@
     ul, ol {
       margin-left: 20px;
     }
+
+    .frame {
+      border: 10px solid #333;
+      border-radius: 20px;
+      padding: 20px;
+      background-color: #fff;
+      animation: fadeIn 1s forwards;
+      margin-bottom: 30px;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Mobile-friendly styles */
+    @media screen and (max-width: 480px) {
+      img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .frame {
+        border-width: 5px;
+        padding: 10px;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <hr size="3" noshade>
-  <table cellspacing="30">
-    <tr>
-      <td> <img src="Images/Mujeeb-UL-Haq-Qadri-picture.png" alt="Mujeeb Ul Haq Qadri"></td>
-      <td align="left">
-        <h1>Mujeeb Ul Haq Qadri</h1>
-        <p>Senior Process Executive at <strong><a href="https://www.cognizant.com/in/en">Cognizant</a></strong>.</p>
-        <p>I am a Quick learner. I love to learn new Skills and listening to music</p>
-      </td>
-    </tr>
-  </table>
-  <hr size="3" noshade>
-  <h3>Education</h3>
-  <ul>
-    <li>New Era Public School - Rajbagh, Srinagar, J&K. <strong>(Nursery to 1st Standard)</strong></li>
-    <li>Vision School Of Education - Kanitar, Srinagar, J&K. <strong>(1st to 10th Standard)</strong></li>
-    <li>Shadab College - Malabagh, Srinagar, J&K. <strong>(11th Standard)</strong></li>
-    <li>Govt. Polytechnic College - Ganderbal, Srinagar, J&K. <strong>(3yr Diploma In Civil Engineering)</strong></li>
-    <li>Aryan Group of Colleges - Banur, Rajpura, Punjab. <strong>(Bachelors in Civil Engineering)</strong></li>
-  </ul>
-  <hr size="3" noshade>
-  <h3>Technical Education</h3>
-  <ul>
-    <li>University Of Kashmir - Dargah, Srinagar, J&K. <strong>(AutoCAD 2D + 3D)</strong></li>
-    <li>NICT - Dargah, Srinagar, J&K. <strong>(6 Months Diploma in IT)</strong></li>
-    <li>NICT - Dargah, Srinagar, J&K. <strong>(Web Page Design)</strong></li>
-    <li>Programming HUB - Online <strong>(HTML - <a href="https://storage.googleapis.com/programminghub/certificate%2F1629009994685.pdf">1629009994685</a>)</strong></li>
-    <li>Programming HUB - Online <strong>(Bootstrap Framework - <a href="https://storage.googleapis.com/programminghub/certificate%2F1628959533347.pdf">1628959533347</a>)</strong></li>
-    <li>Programing HUB - Online <strong>(Seo - <a href="https://storage.googleapis.com/programminghub/certificate%2F1618903679370.jpg">1618903679370</a>)</strong></li>
-    <li>Programing HUB - Online <strong>(Digital Marketing - <a href="https://storage.googleapis.com/programminghub/certificate%2F1625901536958.jpg">1625901536958</a>)</strong></li>
-    <li>Programing HUB - Online <strong>(Digital Marketing Advanced - <a href="https://storage.googleapis.com/programminghub/certificate%2F1625916109484.jpg">1625916109484</a>)</strong></li>
-    <li>Hubspot - Online <strong>(Digital Marketing - <a href="https://drive.google.com/file/d/1nY8onjKBHY7zE3H-thhh7bdse4Kyyz6z/view?usp=sharing">Certificate</a>)</strong></li>
-    <li>Google - Online <strong>(The Fundamentals of Digital Marketing - <a href="https://drive.google.com/file/d/1vBA59Zb-Q2OgfM5vjEx1bJJ3b3rV01F0/view?usp=sharing">Certificate</a>)</strong></li>
-    <li>Hubspot - Online <strong>(Content Marketing - <a href="https://drive.google.com/file/d/1OdpNv2o1sQD68i8IaSZOWhjb3j5nwuCI/view?usp=sharing">Certificate</a>)</strong></li>
-    <li>Udemy - Online <strong>(MS Excel 2016 For Beginners: Master the Essentials - <a href="https://drive.google.com/file/d/1208yYeDo3mrCxrBggNWrwkSw4NmvaiRt/view?usp=sharing">Certificate</a>)</strong></li>
-  </ul>
-  <hr size="3" noshade>
-  <h3>Experience</h3>
-  <table cellspacing="30" >
-    <thead>
-      <th>Company</th>
-      <th>Address</th>
-      <th>Years</th>
-      <th>Designation</th>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a href="https://www.facebook.com/educef.org/">Educef</a></td>
-        <td>Umercolony, Lalbazar Opposite GD Goenka School</td>
-        <td>2017-2018</td>
-        <td>Receptionist</td>
-      </tr>
-      <tr>
-        <td><a href="https://www.justdial.com/Srinagar/Magic-Hands-Opp-GD-Goenka-School-Lal-Bazar-Srinagar/9999PX194-X194-171018104508-R5M3_BZDET">Magic Hands</a></td>
-        <td>Umercolony, Lalbazar Opposite GD Goenka School</td>
-        <td>2018-2019</td>
-        <td>Technical Support</td>
-      </tr>
-      <tr>
-        <td><a href="#">MMD Electricals</a></td>
-        <td>Umercolony A, Lalbazar near Malik Telecoms</td>
-        <td>2020-2021</td>
-        <td>Operation Associate</td>
-      </tr>
-      <tr>
-        <td><a href="https://www.m.mibhp.in">MIBHP</a></td>
-        <td>Victory Crossing, Shiraz Road, nr. Hotel Burj, Rainawari, Srinagar</td>
-        <td>2021-2022</td>
-        <td>T.O</td>
-      </tr>
-      <tr>
-        <td><a href="https://www.cognizant.com/in/en">Cognizant</a></td>
-        <td>Gurgaon, Haryana</td>
-        <td>2022-2023</td>
-        <td>Process Executive-voice</td>
-      </tr>
-       <tr>
-        <td><a href="https://www.cognizant.com/in/en">Cognizant</a></td>
-        <td>Gurgaon, Haryana</td>
-        <td>2023-Now</td>
-        <td>Senior Process Executive-voice</td>
-      </tr>
-    </tbody>
-  </table>
-  <hr size="3" noshade>
-  <h3>Skills</h3>
-  <table cellspacing="30">
-    <tr>
-      <td>AutoCAD</td>
-      <td>🌟🌟🌟⭐⭐</td>
-      <td>Digital Marketing</td>
-      <td>🌟🌟🌟⭐⭐</td>
-      <td>Wordpress</td>
-      <td>🌟🌟🌟⭐⭐</td>
-    </tr>
-    <tr>
-      <td>HTML</td>
-      <td>🌟🌟🌟🌟⭐</td>
-      <td>SEO</td>
-      <td>🌟🌟⭐⭐⭐</td>
-      <td>Bootstrap</td>
-      <td>🌟🌟⭐⭐⭐</td>
-    </tr>
-    <tr>
-      <td>CSS</td>
-      <td>🌟🌟🌟🌟⭐</td>
-      <td>Canva</td>
-      <td>🌟🌟🌟⭐⭐</td>
-      <td>MS Office</td>
-      <td>🌟🌟🌟⭐⭐</td>
-    </tr>
-  </table>
-  <hr size="3" noshade>
-  <h3>Hobbies</h3>
-  <ol>
-    <li>Cycling</li>
-    <li>Learning More</li>
-  </ol>
-  <hr size="3" noshade>
-  <a href="Contact.html">Contact Me</a>
-  <hr size="3" noshade>
+  <div class="container">
+    <div class="frame">
+      <hr size="3" noshade>
+      <table cellspacing="30">
+        <tr>
+          <td> <img src="Images/Mujeeb-UL-Haq-Qadri-picture.png" alt="Mujeeb Ul Haq Qadri"></td>
+          <td align="left">
+            <h1>Mujeeb Ul Haq Qadri</h1>
+            <p>Senior Process Executive at <strong><a href="https://www.cognizant.com/in/en">Cognizant</a></strong>.</p>
+            <p>I am a Quick learner. I love to learn new Skills and listening to music</p>
+          </td>
+        </tr>
+      </table>
+      <hr size="3" noshade>
+      <h3>Education</h3>
+      <ul>
+        <li>New Era Public School - Rajbagh, Srinagar, J&K. <strong>(Nursery to 1st Standard)</strong></li>
+        <li>Vision School Of Education - Kanitar, Srinagar, J&K. <strong>(1st to 10th Standard)</strong></li>
+        <li>Shadab College - Malabagh, Srinagar, J&K. <strong>(11th Standard)</strong></li>
+        <li>Govt. Polytechnic College - Ganderbal, Srinagar, J&K. <strong>(3yr Diploma In Civil Engineering)</strong></li>
+        <li>Aryan Group of Colleges - Banur, Rajpura, Punjab. <strong>(Bachelors in Civil Engineering)</strong></li>
+      </ul>
+      <hr size="3" noshade>
+      <h3>Technical Education</h3>
+      <ul>
+        <li>University Of Kashmir - Dargah, Srinagar, J&K. <strong>(AutoCAD 2D + 3D)</strong></li>
+        <li>NICT - Dargah, Srinagar, J&K. <strong>(6 Months Diploma in IT)</strong></li>
+        <li>NICT - Dargah, Srinagar, J&K. <strong>(Web Page Design)</strong></li>
+        <li>Programming HUB - Online <strong>(HTML - <a href="https://storage.googleapis.com/programminghub/certificate%2F1629009994685.pdf">1629009994685</a>)</strong></li>
+        <li>Programming HUB - Online <strong>(Bootstrap Framework - <a href="https://storage.googleapis.com/programminghub/certificate%2F1628959533347.pdf">1628959533347</a>)</strong></li>
+        <li>Programing HUB - Online <strong>(Seo - <a href="https://storage.googleapis.com/programminghub/certificate%2F1618903679370.jpg">1618903679370</a>)</strong></li>
+        <li>Programing HUB - Online <strong>(Digital Marketing - <a href="https://storage.googleapis.com/programminghub/certificate%2F1625901536958.jpg">1625901536958</a>)</strong></li>
+        <li>Programing HUB - Online <strong>(Digital Marketing Advanced - <a href="https://storage.googleapis.com/programminghub/certificate%2F1625916109484.jpg">1625916109484</a>)</strong></li>
+        <li>Hubspot - Online <strong>(Digital Marketing - <a href="https://drive.google.com/file/d/1nY8onjKBHY7zE3H-thhh7bdse4Kyyz6z/view?usp=sharing">Certificate</a>)</strong></li>
+        <li>Google - Online <strong>(The Fundamentals of Digital Marketing - <a href="https://drive.google.com/file/d/1vBA59Zb-Q2OgfM5vjEx1bJJ3b3rV01F0/view?usp=sharing">Certificate</a>)</strong></li>
+        <li>Hubspot - Online <strong>(Content Marketing - <a href="https://drive.google.com/file/d/1OdpNv2o1sQD68i8IaSZOWhjb3j5nwuCI/view?usp=sharing">Certificate</a>)</strong></li>
+        <li>Udemy - Online <strong>(MS Excel 2016 For Beginners: Master the Essentials - <a href="https://drive.google.com/file/d/1208yYeDo3mrCxrBggNWrwkSw4NmvaiRt/view?usp=sharing">Certificate</a>)</strong></li>
+      </ul>
+      <hr size="3" noshade>
+      <h3>Experience</h3>
+      <table cellspacing="30" >
+        <thead>
+          <th>Company</th>
+          <th>Address</th>
+          <th>Years</th>
+          <th>Designation</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="https://www.facebook.com/educef.org/">Educef</a></td>
+            <td>Umercolony, Lalbazar Opposite GD Goenka School</td>
+            <td>2017-2018</td>
+            <td>Receptionist</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.justdial.com/Srinagar/Magic-Hands-Opp-GD-Goenka-School-Lal-Bazar-Srinagar/9999PX194-X194-171018104508-R5M3_BZDET">Magic Hands</a></td>
+            <td>Umercolony, Lalbazar Opposite GD Goenka School</td>
+            <td>2018-2019</td>
+            <td>Technical Support</td>
+          </tr>
+          <tr>
+            <td><a href="#">MMD Electricals</a></td>
+            <td>Umercolony A, Lalbazar near Malik Telecoms</td>
+            <td>2020-2021</td>
+            <td>Operation Associate</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.m.mibhp.in">MIBHP</a></td>
+            <td>Victory Crossing, Shiraz Road, nr. Hotel Burj, Rainawari, Srinagar</td>
+            <td>2021-2022</td>
+            <td>T.O</td>
+          </tr>
+          <tr>
+            <td><a href="https://www.cognizant.com/in/en">Cognizant</a></td>
+            <td>Gurgaon, Haryana</td>
+            <td>2022-2023</td>
+            <td>Process Executive-voice</td>
+          </tr>
+           <tr>
+            <td><a href="https://www.cognizant.com/in/en">Cognizant</a></td>
+            <td>Gurgaon, Haryana</td>
+            <td>2023-Now</td>
+            <td>Senior Process Executive-voice</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr size="3" noshade>
+      <h3>Skills</h3>
+      <table cellspacing="30">
+        <tr>
+          <td>AutoCAD</td>
+          <td>🌟🌟🌟⭐⭐</td>
+          <td>Digital Marketing</td>
+          <td>🌟🌟🌟⭐⭐</td>
+          <td>Wordpress</td>
+          <td>🌟🌟🌟⭐⭐</td>
+        </tr>
+        <tr>
+          <td>HTML</td>
+          <td>🌟🌟🌟🌟⭐</td>
+          <td>SEO</td>
+          <td>🌟🌟⭐⭐⭐</td>
+          <td>Bootstrap</td>
+          <td>🌟🌟⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td>CSS</td>
+          <td>🌟🌟🌟⭐⭐</td>
+          <td>Content Marketing</td>
+          <td>🌟🌟⭐⭐⭐</td>
+          <td>MS Excel</td>
+          <td>🌟🌟🌟⭐⭐</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    window.onload = function() {
+      var container = document.querySelector('.container');
+      container.style.opacity = '1';
+    };
+  </script>
 </body>
 
 </html>
