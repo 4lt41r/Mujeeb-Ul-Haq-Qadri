@@ -1,224 +1,312 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Mujeeb Ul Haq Qadri</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mujeeb Ul Haq Qadri - Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #3498db;
+      --background-color: #f8f9fa;
+      --text-color: #333;
+      --font-primary: 'Poppins', sans-serif;
+    }
+
+    .amazon-theme {
+      --primary-color: #ff9900;
+      --secondary-color: #000000;
+      --background-color: #ffffff;
+      --text-color: #333;
+      --font-primary: 'Space Grotesk', sans-serif;
+    }
+
+    .netflix-theme {
+      --primary-color: #e50914;
+      --secondary-color: #000000;
+      --background-color: #000000;
+      --text-color: #ffffff;
+      --font-primary: 'Inter', sans-serif;
+    }
+
+    .google-theme {
+      --primary-color: #4285f4;
+      --secondary-color: #fbbc05;
+      --background-color: #ffffff;
+      --text-color: #333;
+      --font-primary: 'Inter', sans-serif;
+    }
+
+    .dark-theme {
+      --background-color: #121212;
+      --text-color: #eaeaea;
+      --primary-color: #bb86fc;
+      --font-primary: 'Poppins', sans-serif;
+    }
+
+    * {
       margin: 0;
-      padding: 20px;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: var(--font-primary);
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
     }
 
     .container {
-      opacity: 0;
-      animation: fadeContent 1s forwards;
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px;
     }
 
-    @keyframes fadeContent {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
+    .header, .section {
+      animation: sectionAnim 0.8s ease-out forwards;
     }
 
-    h1 {
-      color: #333;
-      font-size: 24px;
-      margin-bottom: 10px;
+    .name {
+      font-size: 3em;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      text-align: center;
     }
 
-    h3 {
-      color: #333;
-      font-size: 18px;
-      margin-bottom: 10px;
+    .contact {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
     }
 
-    a {
-      color: #0066cc;
-      text-decoration: none;
+    .contact-info {
+      background: var(--background-color);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
-    table {
-      border-collapse: collapse;
-    }
-
-    td, th {
-      padding: 5px 10px;
-      border: 1px solid #ccc;
-    }
-
-    img {
-      width: 150px;
-      height: 150px;
-    }
-
-    ul, ol {
-      margin-left: 20px;
-    }
-
-    .frame {
-      border: 10px solid #333;
-      border-radius: 20px;
-      padding: 20px;
-      background-color: #fff;
-      animation: fadeIn 1s forwards;
+    .section {
+      background: var(--background-color);
       margin-bottom: 30px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
+    .section h2 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-size: 1.5em;
     }
 
-    /* Mobile-friendly styles */
-    @media screen and (max-width: 480px) {
-      img {
-        width: 100px;
-        height: 100px;
-      }
+    .work-experience .job-item,
+    .certifications .certification-item,
+    .skills-grid .skill-item,
+    .achievement .achievement-item, .about .about-text {
+      background: rgba(0, 0, 0, 0.05);
+      padding: 10px 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+    }
 
-      .frame {
-        border-width: 5px;
-        padding: 10px;
-      }
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .buttons-bar {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 999;
+    }
+
+    .buttons-bar button, .buttons-bar select {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    @keyframes sectionAnim {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
-
 <body>
-  <div class="container">
-    <div class="frame">
-      <hr size="3" noshade>
-      <table cellspacing="30">
-        <tr>
-          <td> <img src="Images/Mujeeb-UL-Haq-Qadri-picture.png" alt="Mujeeb Ul Haq Qadri"></td>
-          <td align="left">
-            <h1>Mujeeb Ul Haq Qadri</h1>
-            <p>Senior Process Executive at <strong><a href="https://www.cognizant.com/in/en">Cognizant</a></strong>.</p>
-            <p>I am a Quick learner. I love to learn new Skills and listening to music</p>
-          </td>
-        </tr>
-      </table>
-      <hr size="3" noshade>
-      <h3>Education</h3>
-      <ul>
-        <li>New Era Public School - Rajbagh, Srinagar, J&K. <strong>(Nursery to 1st Standard)</strong></li>
-        <li>Vision School Of Education - Kanitar, Srinagar, J&K. <strong>(1st to 10th Standard)</strong></li>
-        <li>Shadab College - Malabagh, Srinagar, J&K. <strong>(11th Standard)</strong></li>
-        <li>Govt. Polytechnic College - Ganderbal, Srinagar, J&K. <strong>(3yr Diploma In Civil Engineering)</strong></li>
-        <li>Aryan Group of Colleges - Banur, Rajpura, Punjab. <strong>(Bachelors in Civil Engineering)</strong></li>
-      </ul>
-      <hr size="3" noshade>
-      <h3>Technical Education</h3>
-      <ul>
-        <li>University Of Kashmir - Dargah, Srinagar, J&K. <strong>(AutoCAD 2D + 3D)</strong></li>
-        <li>NICT - Dargah, Srinagar, J&K. <strong>(6 Months Diploma in IT)</strong></li>
-        <li>NICT - Dargah, Srinagar, J&K. <strong>(Web Page Design)</strong></li>
-        <li>Programming HUB - Online <strong>(HTML - <a href="https://storage.googleapis.com/programminghub/certificate%2F1629009994685.pdf">1629009994685</a>)</strong></li>
-        <li>Programming HUB - Online <strong>(Bootstrap Framework - <a href="https://storage.googleapis.com/programminghub/certificate%2F1628959533347.pdf">1628959533347</a>)</strong></li>
-        <li>Programing HUB - Online <strong>(Seo - <a href="https://storage.googleapis.com/programminghub/certificate%2F1618903679370.jpg">1618903679370</a>)</strong></li>
-        <li>Programing HUB - Online <strong>(Digital Marketing - <a href="https://storage.googleapis.com/programminghub/certificate%2F1625901536958.jpg">1625901536958</a>)</strong></li>
-        <li>Programing HUB - Online <strong>(Digital Marketing Advanced - <a href="https://storage.googleapis.com/programminghub/certificate%2F1625916109484.jpg">1625916109484</a>)</strong></li>
-        <li>Hubspot - Online <strong>(Digital Marketing - <a href="https://drive.google.com/file/d/1nY8onjKBHY7zE3H-thhh7bdse4Kyyz6z/view?usp=sharing">Certificate</a>)</strong></li>
-        <li>Google - Online <strong>(The Fundamentals of Digital Marketing - <a href="https://drive.google.com/file/d/1vBA59Zb-Q2OgfM5vjEx1bJJ3b3rV01F0/view?usp=sharing">Certificate</a>)</strong></li>
-        <li>Hubspot - Online <strong>(Content Marketing - <a href="https://drive.google.com/file/d/1OdpNv2o1sQD68i8IaSZOWhjb3j5nwuCI/view?usp=sharing">Certificate</a>)</strong></li>
-        <li>Udemy - Online <strong>(MS Excel 2016 For Beginners: Master the Essentials - <a href="https://drive.google.com/file/d/1208yYeDo3mrCxrBggNWrwkSw4NmvaiRt/view?usp=sharing">Certificate</a>)</strong></li>
-      </ul>
-      <hr size="3" noshade>
-      <h3>Experience</h3>
-      <table cellspacing="30" >
-        <thead>
-          <th>Company</th>
-          <th>Address</th>
-          <th>Years</th>
-          <th>Designation</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td><a href="https://www.facebook.com/educef.org/">Educef</a></td>
-            <td>Umercolony, Lalbazar Opposite GD Goenka School</td>
-            <td>2017-2018</td>
-            <td>Receptionist</td>
-          </tr>
-          <tr>
-            <td><a href="https://www.justdial.com/Srinagar/Magic-Hands-Opp-GD-Goenka-School-Lal-Bazar-Srinagar/9999PX194-X194-171018104508-R5M3_BZDET">Magic Hands</a></td>
-            <td>Umercolony, Lalbazar Opposite GD Goenka School</td>
-            <td>2018-2019</td>
-            <td>Technical Support</td>
-          </tr>
-          <tr>
-            <td><a href="#">MMD Electricals</a></td>
-            <td>Umercolony A, Lalbazar near Malik Telecoms</td>
-            <td>2020-2021</td>
-            <td>Operation Associate</td>
-          </tr>
-          <tr>
-            <td><a href="https://www.m.mibhp.in">MIBHP</a></td>
-            <td>Victory Crossing, Shiraz Road, nr. Hotel Burj, Rainawari, Srinagar</td>
-            <td>2021-2022</td>
-            <td>T.O</td>
-          </tr>
-          <tr>
-            <td><a href="https://www.cognizant.com/in/en">Cognizant</a></td>
-            <td>Gurgaon, Haryana</td>
-            <td>2022-2023</td>
-            <td>Process Executive-voice</td>
-          </tr>
-           <tr>
-            <td><a href="https://www.cognizant.com/in/en">Cognizant</a></td>
-            <td>Gurgaon, Haryana</td>
-            <td>2023-Now</td>
-            <td>Senior Process Executive-voice</td>
-          </tr>
-        </tbody>
-      </table>
-      <hr size="3" noshade>
-      <h3>Skills</h3>
-      <table cellspacing="30">
-        <tr>
-          <td>AutoCAD</td>
-          <td>🌟🌟🌟⭐⭐</td>
-          <td>Digital Marketing</td>
-          <td>🌟🌟🌟⭐⭐</td>
-          <td>Wordpress</td>
-          <td>🌟🌟🌟⭐⭐</td>
-        </tr>
-        <tr>
-          <td>HTML</td>
-          <td>🌟🌟🌟🌟⭐</td>
-          <td>SEO</td>
-          <td>🌟🌟⭐⭐⭐</td>
-          <td>Bootstrap</td>
-          <td>🌟🌟⭐⭐⭐</td>
-        </tr>
-        <tr>
-          <td>CSS</td>
-          <td>🌟🌟🌟⭐⭐</td>
-          <td>Content Marketing</td>
-          <td>🌟🌟⭐⭐⭐</td>
-          <td>MS Excel</td>
-          <td>🌟🌟🌟⭐⭐</td>
-        </tr>
-      </table>
+  <div class="buttons-bar">
+    <select onchange="switchTheme(this.value)">
+      <option value="default">🌐 Professional</option>
+      <option value="amazon">🛒 Amazon</option>
+      <option value="netflix">🎬 Netflix</option>
+      <option value="google">🌈 Google</option>
+      <option value="dark">🌙 Dark Mode</option>
+    </select>
+    <button onclick="downloadPDF()">⬇️ Download PDF</button>
+  </div>
+  <div class="container" id="resume-content">
+     <div class="header">
+      <h1 class="name">Mujeeb Ul Haq Qadri</h1>
+      <div class="contact">
+        <div class="contact-info">Senior Quality Reviewer</div>
+         </div>
+         <div class="contact">
+        <div class="contact-info"> Contact : +91-9596517957</div>
+          <div class="contact-info">Email : syedmujeeb.qadri@gmail.com</div>
+      </div>
     </div>
+
+    <div class="section">
+      <h2>About Me</h2>
+       <div class="about">
+      <div class="about-text animate-on-scroll">
+        <p>Detail-oriented and dedicated Quality Analyst with around 1.6+ years of experience in ensuring the quality and integrity of google ads. Proven ability to analyze, review, and enforce google guidelines while maintaining a positive user experience. Seeking to leverage expertise in content moderation and a strong understanding of digital communication to contribute to a dynamic team focused on enhancing online safety and community engagement. Skilled in building live trackers using advanced formulas and automating repetitive tasks using AI scripts to boost productivity. Proven track record of maintaining 99%+ quality standards. Proficient in RCA, reporting, training, and digital tools like Google Workspace and MS Office.</p>
+      </div>
+        </div>
+    </div>
+
+    <div class="section">
+      <h2>Work Experience</h2>
+      <div class="work-experience">
+        <div class="job-item animate-on-scroll">
+          <h3>Senior Quality Reviewer - Cognizant</h3>
+          <p>JAN 2024 – Present</p>
+          <p>Mentored a team of 14 agents on a Generative AI project for Google, ensuring consistent delivery of high-quality outputs with over 99% accuracy across all processes through daily feedback, detailed audits, and strict adherence to project guidelines and quality standards. Conducted refresher sessions to address performance gaps and align agents with evolving objectives, while organizing weekly Process Knowledge Tests (PKTs) to identify misalignments and deliver targeted training. Maintained comprehensive Root Cause Analysis (RCA) reports to track error trends and implement corrective measures. Prepared and presented Weekly and Monthly Business Review (WBR/MBR) reports to stakeholders, providing actionable insights into quality metrics and performance trends. As the project scaled to 130 agents, successfully managed a team of 16 Quality Analysts to uphold quality benchmarks. Currently leading the training of 38 raters for a new AI process, supporting team scalability and ensuring sustained quality assurance above 99%.</p>
+        </div>
+        <div class="job-item animate-on-scroll">
+          <h3>Senior Process Executive - Cognizant</h3>
+          <p>APR 2023 – 2024</p>
+          <p>Successfully transitioned across multiple new Google projects, demonstrating strong adaptability and rapid learning of diverse process guidelines. Consistently executed tasks with over 99% accuracy, ensuring full compliance with client requirements and maintaining high-quality standards. Earned recognition from management for outstanding contributions and reliable performance in delivering top-tier results. Trained in emerging Generative AI workflows, showcasing proficiency in managing complex processes and meeting evolving client expectations. Collaborated effectively with cross-functional teams to align deliverables with project specifications, contributing to seamless operations and sustained process excellence.</p>
+        </div>
+        <div class="job-item animate-on-scroll">
+          <h3>Process Executive - Cognizant</h3>
+          <p>JAN 2022 – 2023</p>
+          <p>Consistently achieved and maintained a 100% quality accuracy while exceeding productivity targets by over 120%, demonstrating exceptional efficiency and attention to detail. Performed all tasks in strict alignment with Google’s guidelines, ensuring full compliance with quality standards and project requirements. Earned multiple recognitions from team leaders for exemplary performance, reliability, and proactive support provided to new agents. Demonstrated a strong commitment to continuous improvement and operational excellence, significantly contributing to the overall success of the project. Actively collaborated with team members to share knowledge, provide guidance, and support the onboarding and development of new team members.</p>
+        </div>
+        <div class="job-item animate-on-scroll">
+          <h3>Technical Manager - MIBHP</h3>
+          <p>JUN 2021 – 2022</p>
+          <p>Developed and executed strategic social media advertising campaigns that significantly enhanced brand visibility and contributed to increased product sales. Effectively managed lead stages and workflows within HubSpot CRM, optimizing lead nurturing processes and improving overall sales efficiency. Maintained and regularly updated the company website to ensure content accuracy, functionality, and a seamless user experience. Generated detailed reports and analytics to track campaign performance, providing actionable, data-driven insights that supported informed decision-making and continuous marketing optimization.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <div class="work-experience animate-on-scroll">
+        <div class="job-item">
+          <h3>B.Tech - Civil Engineering</h3>
+          <p>ARYANS GROUP OF COLLEGES, Chandigarh | 2017–2021</p>
+        </div>
+        <div class="job-item">
+          <h3>Diploma - Civil Engineering</h3>
+          <p>Govt Polytechnic College, Ganderbal | 2012–2016</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Certifications</h2>
+      <div class="certifications">
+        <div class="certification-item animate-on-scroll"><a href = "https://drive.google.com/file/d/1plE1_duX6BkTTPmYfW-U7OZ7Ogcs1DRj/view?usp=drive_link" style="text-decoration: none; color: inherit;" target= "_blank" > Digital Marketing</a></div>
+        <div class="certification-item animate-on-scroll"><a href="https://drive.google.com/drive/folders/1a08ADVIOlFzFyfk5qs4SMIzGFZavHACp?usp=drive_link" style="text-decoration: none; color: inherit;"> Prompt Engineering</a></div>
+          <div class="certification-item animate-on-scroll"><a href = "https://drive.google.com/drive/folders/1a2Odk6El08CkHN2X2y4FuftQVyJ5YOHv?usp=drive_link " style="text-decoration: none; color: inherit;" target= "_blank" >Generative AI</a></div>
+          <div class="certification-item animate-on-scroll"><a href = "https://drive.google.com/drive/folders/1aVY9O7lMo0ooayurSO09lJhIZ2tBYsed?usp=drive_link " style="text-decoration: none; color: inherit;" target= "_blank" >MS Excel</a></div>
+          <div class="certification-item animate-on-scroll"><a href = "https://drive.google.com/drive/folders/1a2HcapWKmz-bjd10d9n1lrvcQVYEdwmr?usp=drive_link " style="text-decoration: none; color: inherit;" target= "_blank" >Data Analysis</a></div>
+        <div class="certification-item animate-on-scroll"><a href = "https://drive.google.com/file/d/1xQa0kZ2rWLj7k6PVxkYaXf731Vigta_-/view?usp=drive_link " style="text-decoration: none; color: inherit;" target= "_blank" >Google Ads</a></div>
+        <div class="certification-item animate-on-scroll"><a href = "https://drive.google.com/drive/folders/1a0H6aVqD5xDx-3XqZ5Y06xz4lFrC7oTP?usp=drive_link " style="text-decoration: none; color: inherit;" target= "_blank" >Web Design</a></div>
+        <div class="certification-item animate-on-scroll"><a href = "https://drive.google.com/file/d/1aDtLoaahkUMYuKWg3rmhseXRP1Qdy0gl/view?usp=drive_link " style="text-decoration: none; color: inherit;" target= "_blank" >Diploma in IT</a></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Soft Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item animate-on-scroll">Attention to Detail</div>
+        <div class="skill-item animate-on-scroll">Leadership</div>
+        <div class="skill-item animate-on-scroll">Analytical Thinking</div>
+        <div class="skill-item animate-on-scroll">Time Management</div>
+        <div class="skill-item animate-on-scroll">Problem Solving</div>
+        <div class="skill-item animate-on-scroll">Communication Skills</div>
+        <div class="skill-item animate-on-scroll">Adaptability</div>
+        <div class="skill-item animate-on-scroll">Team Management</div>
+      </div>
+    </div>
+
+      <div class="section">
+      <h2>Core Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item animate-on-scroll">Quality Assurance & Auditing</div>
+        <div class="skill-item animate-on-scroll">Content Moderation</div>
+        <div class="skill-item animate-on-scroll">Root Cause Analysis (RCA)</div>
+        <div class="skill-item animate-on-scroll">Team Training & Performance Coaching</div>
+        <div class="skill-item animate-on-scroll">Process Improvement</div>
+        <div class="skill-item animate-on-scroll">KPI Reporting (WBR/MBR)</div>
+      </div>
+    </div>
+      
+    <div class="section">
+        <h2><a href = "https://drive.google.com/drive/folders/1flzpdjq2B4_IsCq36mMmc3qfS7_uwqzv?usp=drive_link " style="text-decoration: none; color: inherit;" target= "_blank" >Achievements</a></h2>
+        <div class="achievement">
+      <div class="achievement-item animate-on-scroll">🏆 Always striving, never settling – Feb 2024<p>Trained in multiple workflows, mentored new QAs, ensured 99%+ accuracy, zero compliance misses, and ranked among top QA performers.</p></div>
+      <div class="achievement-item animate-on-scroll">🤝 Working as one – Mar 2025<p>Maintained 99%+ accuracy in challenging tasks; recognized for consistent performance and support to Ops in upholding quality standards.</p></div>
+    </div>
+    </div>
+
+    
   </div>
 
   <script>
-    window.onload = function() {
-      var container = document.querySelector('.container');
-      container.style.opacity = '1';
-    };
+    function switchTheme(theme) {
+      const body = document.body;
+      body.className = `${theme}-theme`.trim();
+    }
+
+    function animateOnScroll() {
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 50) {
+          el.classList.add('visible');
+        }
+      });
+    }
+
+    function downloadPDF() {
+      const element = document.getElementById('resume-content');
+      html2pdf().from(element).save('Mujeeb_Ul_Haq_Qadri_Resume.pdf');
+    }
+
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
   </script>
 </body>
-
 </html>
+
