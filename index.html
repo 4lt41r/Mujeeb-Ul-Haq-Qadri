@@ -5,308 +5,713 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mujeeb Ul Haq Qadri - Resume</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>-->
   <style>
     :root {
       --primary-color: #2c3e50;
       --secondary-color: #3498db;
-      --background-color: #f8f9fa;
+      --background-color: #f0f0f0;
       --text-color: #333;
       --font-primary: 'Poppins', sans-serif;
+      --neumorphic-shadow: 8px 8px 16px #d1d1d1, -8px -8px 16px #ffffff;
+      --neumorphic-shadow-inset: inset 4px 4px 8px #d1d1d1, inset -4px -4px 8px #ffffff;
+      --neumorphic-shadow-hover: 4px 4px 8px #d1d1d1, -4px -4px 8px #ffffff;
+      --neumorphic-shadow-pressed: inset 6px 6px 12px #d1d1d1, inset -6px -6px 12px #ffffff;
+      --border-radius: 20px;
+      --transition: all 0.3s ease;
+      /* Base font size fluid between 14px and 18px */
+      font-size: clamp(14px, 1.2vw + 0.5rem, 18px);
     }
-
+    
     .amazon-theme {
       --primary-color: #ff9900;
-      --secondary-color: #000000;
-      --background-color: #ffffff;
+      --secondary-color: #232f3e;
+      --background-color: #f0f0f0;
       --text-color: #333;
       --font-primary: 'Space Grotesk', sans-serif;
+      --neumorphic-shadow: 8px 8px 16px #d1d1d1, -8px -8px 16px #ffffff;
+      --neumorphic-shadow-inset: inset 4px 4px 8px #d1d1d1, inset -4px -4px 8px #ffffff;
+      --neumorphic-shadow-hover: 4px 4px 8px #d1d1d1, -4px -4px 8px #ffffff;
+      --neumorphic-shadow-pressed: inset 6px 6px 12px #d1d1d1, inset -6px -6px 12px #ffffff;
     }
-
+    
     .netflix-theme {
       --primary-color: #e50914;
-      --secondary-color: #000000;
-      --background-color: #000000;
+      --secondary-color: #f5f5f1;
+      --background-color: #141414;
       --text-color: #ffffff;
       --font-primary: 'Inter', sans-serif;
+      --neumorphic-shadow: 8px 8px 16px #0a0a0a, -8px -8px 16px #1e1e1e;
+      --neumorphic-shadow-inset: inset 4px 4px 8px #0a0a0a, inset -4px -4px 8px #1e1e1e;
+      --neumorphic-shadow-hover: 4px 4px 8px #0a0a0a, -4px -4px 8px #1e1e1e;
+      --neumorphic-shadow-pressed: inset 6px 6px 12px #0a0a0a, inset -6px -6px 12px #1e1e1e;
     }
-
+    
     .google-theme {
       --primary-color: #4285f4;
       --secondary-color: #fbbc05;
-      --background-color: #ffffff;
+      --background-color: #f8f9fa;
       --text-color: #333;
       --font-primary: 'Inter', sans-serif;
+      --neumorphic-shadow: 8px 8px 16px #d8d8d8, -8px -8px 16px #ffffff;
+      --neumorphic-shadow-inset: inset 4px 4px 8px #d8d8d8, inset -4px -4px 8px #ffffff;
+      --neumorphic-shadow-hover: 4px 4px 8px #d8d8d8, -4px -4px 8px #ffffff;
+      --neumorphic-shadow-pressed: inset 6px 6px 12px #d8d8d8, inset -6px -6px 12px #ffffff;
     }
-
+    
     .dark-theme {
+      --primary-color: #bb86fc;
+      --secondary-color: #03dac6;
       --background-color: #121212;
       --text-color: #eaeaea;
-      --primary-color: #bb86fc;
       --font-primary: 'Poppins', sans-serif;
+      --neumorphic-shadow: 8px 8px 16px #000000, -8px -8px 16px #222222;
+      --neumorphic-shadow-inset: inset 4px 4px 8px #000000, inset -4px -4px 8px #222222;
+      --neumorphic-shadow-hover: 4px 4px 8px #000000, -4px -4px 8px #222222;
+      --neumorphic-shadow-pressed: inset 6px 6px 12px #000000, inset -6px -6px 12px #222222;
     }
-
+    
+    .apple-theme {
+      --primary-color: #0071e3;
+      --secondary-color: #86868b;
+      --background-color: #f5f5f7;
+      --text-color: #1d1d1f;
+      --font-primary: 'Poppins', sans-serif;
+      --neumorphic-shadow: 8px 8px 16px #d5d5d5, -8px -8px 16px #ffffff;
+      --neumorphic-shadow-inset: inset 4px 4px 8px #d5d5d5, inset -4px -4px 8px #ffffff;
+      --neumorphic-shadow-hover: 4px 4px 8px #d5d5d5, -4px -4px 8px #ffffff;
+      --neumorphic-shadow-pressed: inset 6px 6px 12px #d5d5d5, inset -6px -6px 12px #ffffff;
+    }
+    
+    .spotify-theme {
+      --primary-color: #1db954;
+      --secondary-color: #535353;
+      --background-color: #121212;
+      --text-color: #ffffff;
+      --font-primary: 'Poppins', sans-serif;
+      --neumorphic-shadow: 8px 8px 16px #000000, -8px -8px 16px #222222;
+      --neumorphic-shadow-inset: inset 4px 4px 8px #000000, inset -4px -4px 8px #222222;
+      --neumorphic-shadow-hover: 4px 4px 8px #000000, -4px -4px 8px #222222;
+      --neumorphic-shadow-pressed: inset 6px 6px 12px #000000, inset -6px -6px 12px #222222;
+    }
+    
+    .microsoft-theme {
+      --primary-color: #0078d4;
+      --secondary-color: #f2f2f2;
+      --background-color: #f3f2f1;
+      --text-color: #323130;
+      --font-primary: 'Poppins', sans-serif;
+      --neumorphic-shadow: 8px 8px 16px #d3d2d1, -8px -8px 16px #ffffff;
+      --neumorphic-shadow-inset: inset 4px 4px 8px #d3d2d1, inset -4px -4px 8px #ffffff;
+      --neumorphic-shadow-hover: 4px 4px 8px #d3d2d1, -4px -4px 8px #ffffff;
+      --neumorphic-shadow-pressed: inset 6px 6px 12px #d3d2d1, inset -6px -6px 12px #ffffff;
+    }
+    
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: var(--font-primary);
     }
-
+    
     body {
       background-color: var(--background-color);
       color: var(--text-color);
       line-height: 1.6;
+      min-height: 100vh;
+      padding: 20px;
+      transition: var(--transition);
     }
-
+    
     .container {
       max-width: 1200px;
-      margin: auto;
-      padding: 40px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--neumorphic-shadow);
+      background: var(--background-color);
+      transition: var(--transition);
     }
-
-    .header, .section {
-      animation: sectionAnim 0.8s ease-out forwards;
+    
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 30px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--neumorphic-shadow);
+      background: var(--background-color);
+      transition: var(--transition);
     }
-
+    
     .name {
       font-size: 3em;
       color: var(--primary-color);
       margin-bottom: 20px;
       text-align: center;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: 700;
+      letter-spacing: -0.5px;
     }
-
+    
     .contact {
       display: flex;
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
-      margin-bottom: 40px;
+      margin-top: 20px;
     }
-
+    
     .contact-info {
+      padding: 15px 25px;
+      border-radius: 50px;
+      box-shadow: var(--neumorphic-shadow);
       background: var(--background-color);
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-
+    
+    .contact-info:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--neumorphic-shadow-hover);
+    }
+    
+    .contact-info i {
+      color: var(--primary-color);
+      font-size: 1.2em;
+    }
+    
     .section {
-      background: var(--background-color);
       margin-bottom: 30px;
       padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border-radius: var(--border-radius);
+      box-shadow: var(--neumorphic-shadow);
+      background: var(--background-color);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
     }
-
+    
+    .section:hover {
+      box-shadow: var(--neumorphic-shadow-hover);
+      transform: translateY(-3px);
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .section-header i {
+      font-size: 1.8em;
+      color: var(--primary-color);
+      background: rgba(0,0,0,0.05);
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      box-shadow: var(--neumorphic-shadow-inset);
+    }
+    
     .section h2 {
       color: var(--primary-color);
-      margin-bottom: 20px;
-      font-size: 1.5em;
+      margin-bottom: 0;
+      font-size: 1.8em;
+      font-weight: 600;
     }
-
+    
+    .about-text {
+      padding: 20px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--neumorphic-shadow-inset);
+      background: var(--background-color);
+      transition: var(--transition);
+    }
+    
+    .about-text:hover {
+      box-shadow: var(--neumorphic-shadow-hover);
+    }
+    
     .work-experience .job-item,
     .certifications .certification-item,
-    .skills-grid .skill-item,
-    .achievement .achievement-item, .about .about-text {
-      background: rgba(0, 0, 0, 0.05);
-      padding: 10px 15px;
-      margin-bottom: 15px;
-      border-radius: 10px;
+    .achievement .achievement-item {
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--neumorphic-shadow-inset);
+      background: var(--background-color);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
     }
-
-    .skills-grid {
+    
+    .work-experience .job-item:hover,
+    .certifications .certification-item:hover,
+    .achievement .achievement-item:hover {
+      box-shadow: var(--neumorphic-shadow-hover);
+      transform: translateX(5px);
+    }
+    
+    .work-experience .job-item h3,
+    .certifications .certification-item,
+    .achievement .achievement-item h3 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
+      align-items: center;
+      gap: 10px;
     }
-
+    
+    .work-experience .job-item h3 i,
+    .certifications .certification-item i,
+    .achievement .achievement-item h3 i {
+      font-size: 1.2em;
+    }
+    
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    
+    .skill-item {
+      padding: 15px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--neumorphic-shadow-inset);
+      background: var(--background-color);
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .skill-item:hover {
+      box-shadow: var(--neumorphic-shadow-hover);
+      transform: translateY(-3px);
+    }
+    
+    .skill-item i {
+      color: var(--primary-color);
+      font-size: 1.2em;
+    }
+    
     .buttons-bar {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 10px;
+      bottom: 30px;
+      right: 30px;
+      background: var(--background-color);
+      border-radius: 50px;
       padding: 15px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      box-shadow: var(--neumorphic-shadow);
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 15px;
       z-index: 999;
+      transition: var(--transition);
     }
-
+    
+    .buttons-bar:hover {
+      box-shadow: var(--neumorphic-shadow-hover);
+      transform: translateY(-3px);
+    }
+    
     .buttons-bar button, .buttons-bar select {
-      padding: 8px 12px;
+      padding: 12px 20px;
       border: none;
-      border-radius: 8px;
+      border-radius: 50px;
       cursor: pointer;
       font-weight: 500;
+      background: var(--background-color);
+      color: var(--text-color);
+      box-shadow: var(--neumorphic-shadow);
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-
+    
+    .buttons-bar button:hover, .buttons-bar select:hover {
+      box-shadow: var(--neumorphic-shadow-hover);
+      transform: translateY(-3px);
+      background: var(--primary-color);
+      color: white;
+    }
+    
+    .buttons-bar button:active, .buttons-bar select:active {
+      box-shadow: var(--neumorphic-shadow-pressed);
+      transform: translateY(1px);
+    }
+    
     @keyframes sectionAnim {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
+    
     .animate-on-scroll {
       opacity: 0;
       transform: translateY(20px);
       transition: all 0.8s ease;
     }
-
+    
     .animate-on-scroll.visible {
       opacity: 1;
       transform: translateY(0);
     }
+    
+    /* Theme specific overrides */
+    .netflix-theme .name {
+      background: linear-gradient(90deg, var(--primary-color), #ff0000);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .google-theme .name {
+      background: linear-gradient(90deg, #4285f4, #ea4335, #fbbc05, #34a853);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .dark-theme .name {
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .spotify-theme .name {
+      background: linear-gradient(90deg, var(--primary-color), #00c853);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+        margin: 20px auto;
+      }
+      
+      .name {
+        font-size: 2.2em;
+      }
+      
+      .section {
+        padding: 20px;
+      }
+      
+      .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+      
+      .buttons-bar {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px;
+      }
+      
+      .buttons-bar button, .buttons-bar select {
+        padding: 10px 15px;
+        font-size: 0.9em;
+      }
+    }
   </style>
 </head>
 <body>
+  <div class="container" id="resume-content">
+    <div class="header">
+      <h1 class="name">Mujeeb Ul Haq Qadri</h1>
+      <div class="contact">
+        <div class="contact-info">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:syedmujeeb.qadri@gmail.com" style="text-decoration: none; color: inherit;">Email</a>
+        </div>
+        <div class="contact-info">
+          <i class="fas fa-phone"></i>
+          <a href="tel:+91-9596517957" style="text-decoration: none; color: inherit;">Phone</a>
+        </div>
+        <div class="contact-info">
+          <i class="fab fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/mujeeb-ul-haq-qadri-81796a161/" style="text-decoration: none; color: inherit;">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-header">
+        <i class="fas fa-user"></i>
+        <h2>About Me</h2>
+      </div>
+      <div class="about">
+        <div class="about-text animate-on-scroll">
+          <p>Detail-oriented and dedicated Quality Analyst with around 1.6+ years of experience in ensuring the quality and integrity of google ads. Proven ability to analyze, review, and enforce google guidelines while maintaining a positive user experience. Seeking to leverage expertise in content moderation and a strong understanding of digital communication to contribute to a dynamic team focused on enhancing online safety and community engagement. Skilled in building live trackers using advanced formulas and automating repetitive tasks using AI scripts to boost productivity. Proven track record of maintaining 99%+ quality standards. Proficient in RCA, reporting, training, and digital tools like Google Workspace and MS Office.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-header">
+        <i class="fas fa-briefcase"></i>
+        <h2>Work Experience</h2>
+      </div>
+      <div class="work-experience">
+        <div class="job-item animate-on-scroll">
+          <h3><i class="fas fa-star"></i> Senior Quality Reviewer - Cognizant</h3>
+          <p><strong>JAN 2024 – Present</strong></p>
+          <p>Mentored a team of 14 agents on a Generative AI project for client, ensuring consistent delivery of high-quality outputs with over 99% accuracy across all processes through daily feedback, detailed audits, and strict adherence to project guidelines and quality standards. Conducted refresher sessions to address performance gaps and align agents with evolving objectives, while organizing weekly Process Knowledge Tests (PKTs) to identify misalignments and deliver targeted training. Maintained comprehensive Root Cause Analysis (RCA) reports to track error trends and implement corrective measures. Prepared Weekly and Monthly Business Review (WBR/MBR), providing actionable insights into quality metrics and performance trends. As the project scaled to 130 agents, successfully managed a team of 16 Quality Analysts to uphold quality benchmarks. Currently leading the training of 38 raters for a new AI process, supporting team scalability and ensuring sustained quality assurance above 99%.</p>
+        </div>
+        <div class="job-item animate-on-scroll">
+          <h3><i class="fas fa-chart-line"></i> Senior Process Executive - Cognizant</h3>
+          <p><strong>APR 2023 – 2024</strong></p>
+          <p>Successfully transitioned across multiple new client projects, demonstrating strong adaptability and rapid learning of diverse process guidelines. Consistently executed tasks with over 99% accuracy, ensuring full compliance with client requirements and maintaining high-quality standards. Earned recognition from management for outstanding contributions and reliable performance in delivering top-tier results. Trained in emerging Generative AI workflows, showcasing proficiency in managing complex processes and meeting evolving client expectations. Collaborated effectively with cross-functional teams to align deliverables with project specifications, contributing to seamless operations and sustained process excellence.</p>
+        </div>
+        <div class="job-item animate-on-scroll">
+          <h3><i class="fas fa-tasks"></i> Process Executive - Cognizant</h3>
+          <p><strong>JAN 2022 – 2023</strong></p>
+          <p>Consistently achieved and maintained a 100% quality accuracy while exceeding productivity targets by over 120%, demonstrating exceptional efficiency and attention to detail. Performed all tasks in strict alignment with client's guidelines, ensuring full compliance with quality standards and project requirements. Earned multiple recognitions from team leaders for exemplary performance, reliability, and proactive support provided to new agents. Demonstrated a strong commitment to continuous improvement and operational excellence, significantly contributing to the overall success of the project. Actively collaborated with team members to share knowledge, provide guidance, and support the onboarding and development of new team members.</p>
+        </div>
+        <div class="job-item animate-on-scroll">
+          <h3><i class="fas fa-ad"></i> Technical Manager - MIBHP</h3>
+          <p><strong>JUN 2021 – 2022</strong></p>
+          <p>Developed and executed strategic social media advertising campaigns that significantly enhanced brand visibility and contributed to increased product sales. Effectively managed lead stages and workflows within HubSpot CRM, optimizing lead nurturing processes and improving overall sales efficiency. Maintained and regularly updated the company website to ensure content accuracy, functionality, and a seamless user experience. Generated detailed reports and analytics to track campaign performance, providing actionable, data-driven insights that supported informed decision-making and continuous marketing optimization.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-header">
+        <i class="fas fa-graduation-cap"></i>
+        <h2>Education</h2>
+      </div>
+      <div class="work-experience animate-on-scroll">
+        <div class="job-item">
+          <h3><i class="fas fa-university"></i> B.Tech - Civil Engineering</h3>
+          <p>ARYANS GROUP OF COLLEGES, Chandigarh | 2017–2021</p>
+        </div>
+        <div class="job-item">
+          <h3><i class="fas fa-school"></i> Diploma - Civil Engineering</h3>
+          <p>Govt Polytechnic College, Ganderbal | 2012–2016</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-header">
+        <i class="fas fa-certificate"></i>
+        <h2>Certifications</h2>
+      </div>
+      <div class="certifications">
+        <div class="certification-item animate-on-scroll">
+          <i class="fas fa-robot"></i>
+          <a href="https://drive.google.com/file/d/1plE1_duX6BkTTPmYfW-U7OZ7Ogcs1DRj/view?usp=drive_link" style="text-decoration: none; color: inherit;" target="_blank">Prompt Engineering</a>
+        </div>
+        <div class="certification-item animate-on-scroll">
+          <i class="fas fa-bullhorn"></i>
+          <a href="https://drive.google.com/drive/folders/1a08ADVIOlFzFyfk5qs4SMIzGFZavHACp?usp=drive_link" style="text-decoration: none; color: inherit;" target="_blank">Digital Marketing</a>
+        </div>
+        <div class="certification-item animate-on-scroll">
+          <i class="fas fa-brain"></i>
+          <a href="https://drive.google.com/drive/folders/1a2Odk6El08CkHN2X2y4FuftQVyJ5YOHv?usp=drive_link" style="text-decoration: none; color: inherit;" target="_blank">Generative AI</a>
+        </div>
+        <div class="certification-item animate-on-scroll">
+          <i class="fas fa-table"></i>
+          <a href="https://drive.google.com/drive/folders/1aVY9O7lMo0ooayurSO09lJhIZ2tBYsed?usp=drive_link" style="text-decoration: none; color: inherit;" target="_blank">MS Excel</a>
+        </div>
+        <div class="certification-item animate-on-scroll">
+          <i class="fas fa-chart-bar"></i>
+          <a href="https://drive.google.com/drive/folders/1a2HcapWKmz-bjd10d9n1lrvcQVYEdwmr?usp=drive_link" style="text-decoration: none; color: inherit;" target="_blank">Data Analysis</a>
+        </div>
+        <div class="certification-item animate-on-scroll">
+          <i class="fab fa-google"></i>
+          <a href="https://drive.google.com/file/d/1xQa0kZ2rWLj7k6PVxkYaXf731Vigta_-/view?usp=drive_link" style="text-decoration: none; color: inherit;" target="_blank">Google Ads</a>
+        </div>
+        <div class="certification-item animate-on-scroll">
+          <i class="fas fa-laptop-code"></i>
+          <a href="https://drive.google.com/drive/folders/1a0H6aVqD5xDx-3XqZ5Y06xz4lFrC7oTP?usp=drive_link" style="text-decoration: none; color: inherit;" target="_blank">Web Design</a>
+        </div>
+        <div class="certification-item animate-on-scroll">
+          <i class="fas fa-desktop"></i>
+          <a href="https://drive.google.com/file/d/1aDtLoaahkUMYuKWg3rmhseXRP1Qdy0gl/view?usp=drive_link" style="text-decoration: none; color: inherit;" target="_blank">Diploma in IT</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-header">
+        <i class="fas fa-lightbulb"></i>
+        <h2>Soft Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-item animate-on-scroll">
+          <i class="fas fa-search"></i>
+          <span>Attention to Detail</span>
+        </div>
+        <div class="skill-item animate-on-scroll">
+          <i class="fas fa-users"></i>
+          <span>Leadership</span>
+        </div>
+        <div class="skill-item animate-on-scroll">
+          <i class="fas fa-brain"></i>
+          <span>Analytical Thinking</span>
+        </div>
+        <div class="skill-item animate-on-scroll">
+          <i class="fas fa-clock"></i>
+          <span>Time Management</span>
+        </div>
+        <div class="skill-item animate-on-scroll">
+          <i class="fas fa-puzzle-piece"></i>
+          <span>Problem Solving</span>
+        </div>
+        <div class="skill-item animate-on-scroll">
+          <i class="fas fa-comments"></i>
+          <span>Communication Skills</span>
+        </div>
+        <div class="skill-item animate-on-scroll">
+          <i class="fas fa-sync-alt"></i>
+          <span>Adaptability</span>
+        </div>
+        <div class="skill-item animate-on-scroll">
+          <i class="fas fa-user-friends"></i>
+          <span>Team Management</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-header">
+        <i class="fas fa-tools"></i>
+        <h2>Core Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-item animate-on-scroll">
+          <i class="fas fa-clipboard-check"></i>
+          <span>Quality Assurance & Auditing</span>
+        </div>
+        <div class="skill-item animate-on-scroll">
+          <i class="fas fa-shield-alt"></i>
+          <span>Content Moderation</span>
+        </div>
+        <div class="skill-item animate-on-scroll">
+          <i class="fas fa-search-plus"></i>
+          <span>Root Cause Analysis (RCA)</span>
+        </div>
+        <div class="skill-item animate-on-scroll">
+          <i class="fas fa-chalkboard-teacher"></i>
+          <span>Team Training & Performance Coaching</span>
+        </div>
+        <div class="skill-item animate-on-scroll">
+          <i class="fas fa-sync"></i>
+          <span>Process Improvement</span>
+        </div>
+        <div class="skill-item animate-on-scroll">
+          <i class="fas fa-chart-pie"></i>
+          <span>KPI Reporting (WBR/MBR)</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-header">
+        <i class="fas fa-trophy"></i>
+        <h2><a href="https://drive.google.com/drive/folders/1flzpdjq2B4_IsCq36mMmc3qfS7_uwqzv?usp=drive_link" style="text-decoration: none; color: inherit;" target="_blank">Achievements</a></h2>
+      </div>
+      <div class="achievement">
+        <div class="achievement-item animate-on-scroll">
+          <h3><i class="fas fa-medal"></i> 🏆 Always striving, never settling – Feb 2024</h3>
+          <p>Trained in multiple workflows, mentored new QAs, ensured 99%+ accuracy, zero compliance misses, and ranked among top QA performers.</p>
+        </div>
+        <div class="achievement-item animate-on-scroll">
+          <h3><i class="fas fa-hands-helping"></i> 🤝 Working as one – Mar 2025</h3>
+          <p>Maintained 99%+ accuracy in challenging tasks; recognized for consistent performance and support to Ops in upholding quality standards.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <div class="buttons-bar">
-    <select onchange="switchTheme(this.value)">
+    <select id="theme-selector">
       <option value="default">🌐 Professional</option>
       <option value="amazon">🛒 Amazon</option>
       <option value="netflix">🎬 Netflix</option>
       <option value="google">🌈 Google</option>
       <option value="dark">🌙 Dark Mode</option>
+      <option value="apple">🍎 Apple</option>
+      <option value="spotify">🎵 Spotify</option>
+      <option value="microsoft">⊞ Microsoft</option>
     </select>
-    <button onclick="downloadPDF()">⬇️ Download PDF</button>
+    <!--<button id="download-pdf">
+      <i class="fas fa-download"></i> Download PDF
+    </button>-->
   </div>
-  <div class="container" id="resume-content">
-     <div class="header">
-      <h1 class="name">Mujeeb Ul Haq Qadri</h1>
-      <div class="contact">
-        <div class="contact-info">Senior Quality Reviewer</div>
-         </div>
-         <div class="contact">
-        <div class="contact-info"> Contact : +91-9596517957</div>
-          <div class="contact-info">Email : syedmujeeb.qadri@gmail.com</div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>About Me</h2>
-       <div class="about">
-      <div class="about-text animate-on-scroll">
-        <p>Detail-oriented and dedicated Quality Analyst with around 1.6+ years of experience in ensuring the quality and integrity of google ads. Proven ability to analyze, review, and enforce google guidelines while maintaining a positive user experience. Seeking to leverage expertise in content moderation and a strong understanding of digital communication to contribute to a dynamic team focused on enhancing online safety and community engagement. Skilled in building live trackers using advanced formulas and automating repetitive tasks using AI scripts to boost productivity. Proven track record of maintaining 99%+ quality standards. Proficient in RCA, reporting, training, and digital tools like Google Workspace and MS Office.</p>
-      </div>
-        </div>
-    </div>
-
-    <div class="section">
-      <h2>Work Experience</h2>
-      <div class="work-experience">
-        <div class="job-item animate-on-scroll">
-          <h3>Senior Quality Reviewer - Cognizant</h3>
-          <p>JAN 2024 – Present</p>
-          <p>Mentored a team of 14 agents on a Generative AI project for Google, ensuring consistent delivery of high-quality outputs with over 99% accuracy across all processes through daily feedback, detailed audits, and strict adherence to project guidelines and quality standards. Conducted refresher sessions to address performance gaps and align agents with evolving objectives, while organizing weekly Process Knowledge Tests (PKTs) to identify misalignments and deliver targeted training. Maintained comprehensive Root Cause Analysis (RCA) reports to track error trends and implement corrective measures. Prepared and presented Weekly and Monthly Business Review (WBR/MBR) reports to stakeholders, providing actionable insights into quality metrics and performance trends. As the project scaled to 130 agents, successfully managed a team of 16 Quality Analysts to uphold quality benchmarks. Currently leading the training of 38 raters for a new AI process, supporting team scalability and ensuring sustained quality assurance above 99%.</p>
-        </div>
-        <div class="job-item animate-on-scroll">
-          <h3>Senior Process Executive - Cognizant</h3>
-          <p>APR 2023 – 2024</p>
-          <p>Successfully transitioned across multiple new Google projects, demonstrating strong adaptability and rapid learning of diverse process guidelines. Consistently executed tasks with over 99% accuracy, ensuring full compliance with client requirements and maintaining high-quality standards. Earned recognition from management for outstanding contributions and reliable performance in delivering top-tier results. Trained in emerging Generative AI workflows, showcasing proficiency in managing complex processes and meeting evolving client expectations. Collaborated effectively with cross-functional teams to align deliverables with project specifications, contributing to seamless operations and sustained process excellence.</p>
-        </div>
-        <div class="job-item animate-on-scroll">
-          <h3>Process Executive - Cognizant</h3>
-          <p>JAN 2022 – 2023</p>
-          <p>Consistently achieved and maintained a 100% quality accuracy while exceeding productivity targets by over 120%, demonstrating exceptional efficiency and attention to detail. Performed all tasks in strict alignment with Google’s guidelines, ensuring full compliance with quality standards and project requirements. Earned multiple recognitions from team leaders for exemplary performance, reliability, and proactive support provided to new agents. Demonstrated a strong commitment to continuous improvement and operational excellence, significantly contributing to the overall success of the project. Actively collaborated with team members to share knowledge, provide guidance, and support the onboarding and development of new team members.</p>
-        </div>
-        <div class="job-item animate-on-scroll">
-          <h3>Technical Manager - MIBHP</h3>
-          <p>JUN 2021 – 2022</p>
-          <p>Developed and executed strategic social media advertising campaigns that significantly enhanced brand visibility and contributed to increased product sales. Effectively managed lead stages and workflows within HubSpot CRM, optimizing lead nurturing processes and improving overall sales efficiency. Maintained and regularly updated the company website to ensure content accuracy, functionality, and a seamless user experience. Generated detailed reports and analytics to track campaign performance, providing actionable, data-driven insights that supported informed decision-making and continuous marketing optimization.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>Education</h2>
-      <div class="work-experience animate-on-scroll">
-        <div class="job-item">
-          <h3>B.Tech - Civil Engineering</h3>
-          <p>ARYANS GROUP OF COLLEGES, Chandigarh | 2017–2021</p>
-        </div>
-        <div class="job-item">
-          <h3>Diploma - Civil Engineering</h3>
-          <p>Govt Polytechnic College, Ganderbal | 2012–2016</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>Certifications</h2>
-      <div class="certifications">
-        <div class="certification-item animate-on-scroll"><a href = "https://drive.google.com/file/d/1plE1_duX6BkTTPmYfW-U7OZ7Ogcs1DRj/view?usp=drive_link" style="text-decoration: none; color: inherit;" target= "_blank" > Digital Marketing</a></div>
-        <div class="certification-item animate-on-scroll"><a href="https://drive.google.com/drive/folders/1a08ADVIOlFzFyfk5qs4SMIzGFZavHACp?usp=drive_link" style="text-decoration: none; color: inherit;"> Prompt Engineering</a></div>
-          <div class="certification-item animate-on-scroll"><a href = "https://drive.google.com/drive/folders/1a2Odk6El08CkHN2X2y4FuftQVyJ5YOHv?usp=drive_link " style="text-decoration: none; color: inherit;" target= "_blank" >Generative AI</a></div>
-          <div class="certification-item animate-on-scroll"><a href = "https://drive.google.com/drive/folders/1aVY9O7lMo0ooayurSO09lJhIZ2tBYsed?usp=drive_link " style="text-decoration: none; color: inherit;" target= "_blank" >MS Excel</a></div>
-          <div class="certification-item animate-on-scroll"><a href = "https://drive.google.com/drive/folders/1a2HcapWKmz-bjd10d9n1lrvcQVYEdwmr?usp=drive_link " style="text-decoration: none; color: inherit;" target= "_blank" >Data Analysis</a></div>
-        <div class="certification-item animate-on-scroll"><a href = "https://drive.google.com/file/d/1xQa0kZ2rWLj7k6PVxkYaXf731Vigta_-/view?usp=drive_link " style="text-decoration: none; color: inherit;" target= "_blank" >Google Ads</a></div>
-        <div class="certification-item animate-on-scroll"><a href = "https://drive.google.com/drive/folders/1a0H6aVqD5xDx-3XqZ5Y06xz4lFrC7oTP?usp=drive_link " style="text-decoration: none; color: inherit;" target= "_blank" >Web Design</a></div>
-        <div class="certification-item animate-on-scroll"><a href = "https://drive.google.com/file/d/1aDtLoaahkUMYuKWg3rmhseXRP1Qdy0gl/view?usp=drive_link " style="text-decoration: none; color: inherit;" target= "_blank" >Diploma in IT</a></div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>Soft Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-item animate-on-scroll">Attention to Detail</div>
-        <div class="skill-item animate-on-scroll">Leadership</div>
-        <div class="skill-item animate-on-scroll">Analytical Thinking</div>
-        <div class="skill-item animate-on-scroll">Time Management</div>
-        <div class="skill-item animate-on-scroll">Problem Solving</div>
-        <div class="skill-item animate-on-scroll">Communication Skills</div>
-        <div class="skill-item animate-on-scroll">Adaptability</div>
-        <div class="skill-item animate-on-scroll">Team Management</div>
-      </div>
-    </div>
-
-      <div class="section">
-      <h2>Core Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-item animate-on-scroll">Quality Assurance & Auditing</div>
-        <div class="skill-item animate-on-scroll">Content Moderation</div>
-        <div class="skill-item animate-on-scroll">Root Cause Analysis (RCA)</div>
-        <div class="skill-item animate-on-scroll">Team Training & Performance Coaching</div>
-        <div class="skill-item animate-on-scroll">Process Improvement</div>
-        <div class="skill-item animate-on-scroll">KPI Reporting (WBR/MBR)</div>
-      </div>
-    </div>
-      
-    <div class="section">
-        <h2><a href = "https://drive.google.com/drive/folders/1flzpdjq2B4_IsCq36mMmc3qfS7_uwqzv?usp=drive_link " style="text-decoration: none; color: inherit;" target= "_blank" >Achievements</a></h2>
-        <div class="achievement">
-      <div class="achievement-item animate-on-scroll">🏆 Always striving, never settling – Feb 2024<p>Trained in multiple workflows, mentored new QAs, ensured 99%+ accuracy, zero compliance misses, and ranked among top QA performers.</p></div>
-      <div class="achievement-item animate-on-scroll">🤝 Working as one – Mar 2025<p>Maintained 99%+ accuracy in challenging tasks; recognized for consistent performance and support to Ops in upholding quality standards.</p></div>
-    </div>
-    </div>
-
-    
-  </div>
-
+  
   <script>
-    function switchTheme(theme) {
-      const body = document.body;
-      body.className = `${theme}-theme`.trim();
-    }
-
-    function animateOnScroll() {
-      const elements = document.querySelectorAll('.animate-on-scroll');
-      elements.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if (top < window.innerHeight - 50) {
-          el.classList.add('visible');
-        }
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize theme from localStorage or default
+      const savedTheme = localStorage.getItem('resume-theme') || 'default';
+      applyTheme(savedTheme);
+      
+      // Set the dropdown to the saved theme
+      const themeSelector = document.getElementById('theme-selector');
+      themeSelector.value = savedTheme;
+      
+      // Theme selector change event
+      themeSelector.addEventListener('change', function() {
+        const selectedTheme = this.value;
+        applyTheme(selectedTheme);
+        localStorage.setItem('resume-theme', selectedTheme);
       });
-    }
-
-    function downloadPDF() {
-      const element = document.getElementById('resume-content');
-      html2pdf().from(element).save('Mujeeb_Ul_Haq_Qadri_Resume.pdf');
-    }
-
-    window.addEventListener('scroll', animateOnScroll);
-    window.addEventListener('load', animateOnScroll);
+      
+      // PDF download functionality
+      document.getElementById('download-pdf').addEventListener('click', function() {
+        const element = document.getElementById('resume-content');
+        const opt = {
+          margin: 10,
+          filename: 'Mujeeb_Ul_Haq_Qadri_Resume.pdf',
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2 },
+          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+        html2pdf().set(opt).from(element).save();
+      });
+      
+      // Scroll animation
+      function animateOnScroll() {
+        const elements = document.querySelectorAll('.animate-on-scroll');
+        elements.forEach(el => {
+          const top = el.getBoundingClientRect().top;
+          if (top < window.innerHeight - 50) {
+            el.classList.add('visible');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', animateOnScroll);
+      window.addEventListener('load', animateOnScroll);
+      
+      // Apply theme function
+      function applyTheme(theme) {
+        // Remove all theme classes
+        document.body.className = '';
+        
+        // Add the selected theme class if not default
+        if (theme !== 'default') {
+          document.body.classList.add(`${theme}-theme`);
+        }
+      }
+    });
   </script>
 </body>
 </html>
-
