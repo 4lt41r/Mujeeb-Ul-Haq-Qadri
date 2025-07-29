@@ -6,7 +6,6 @@
   <title>Mujeeb Ul Haq Qadri - Resume</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>-->
   <style>
     :root {
       --primary-color: #2c3e50;
@@ -652,9 +651,6 @@
       <option value="spotify">🎵 Spotify</option>
       <option value="microsoft">⊞ Microsoft</option>
     </select>
-    <!--<button id="download-pdf">
-      <i class="fas fa-download"></i> Download PDF
-    </button>-->
   </div>
   
   <script>
@@ -674,18 +670,6 @@
         localStorage.setItem('resume-theme', selectedTheme);
       });
       
-      // PDF download functionality
-      document.getElementById('download-pdf').addEventListener('click', function() {
-        const element = document.getElementById('resume-content');
-        const opt = {
-          margin: 10,
-          filename: 'Mujeeb_Ul_Haq_Qadri_Resume.pdf',
-          image: { type: 'jpeg', quality: 0.98 },
-          html2canvas: { scale: 2 },
-          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-        };
-        html2pdf().set(opt).from(element).save();
-      });
       
       // Scroll animation
       function animateOnScroll() {
