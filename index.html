@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mujeeb Ul Haq Qadri - Resume</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -22,7 +23,7 @@
       /* Base font size fluid between 14px and 18px */
       font-size: clamp(14px, 1.2vw + 0.5rem, 18px);
     }
-    
+
     .amazon-theme {
       --primary-color: #ff9900;
       --secondary-color: #232f3e;
@@ -34,7 +35,7 @@
       --neumorphic-shadow-hover: 4px 4px 8px #d1d1d1, -4px -4px 8px #ffffff;
       --neumorphic-shadow-pressed: inset 6px 6px 12px #d1d1d1, inset -6px -6px 12px #ffffff;
     }
-    
+
     .netflix-theme {
       --primary-color: #e50914;
       --secondary-color: #f5f5f1;
@@ -46,7 +47,7 @@
       --neumorphic-shadow-hover: 4px 4px 8px #0a0a0a, -4px -4px 8px #1e1e1e;
       --neumorphic-shadow-pressed: inset 6px 6px 12px #0a0a0a, inset -6px -6px 12px #1e1e1e;
     }
-    
+
     .google-theme {
       --primary-color: #4285f4;
       --secondary-color: #fbbc05;
@@ -58,7 +59,7 @@
       --neumorphic-shadow-hover: 4px 4px 8px #d8d8d8, -4px -4px 8px #ffffff;
       --neumorphic-shadow-pressed: inset 6px 6px 12px #d8d8d8, inset -6px -6px 12px #ffffff;
     }
-    
+
     .dark-theme {
       --primary-color: #bb86fc;
       --secondary-color: #03dac6;
@@ -70,7 +71,7 @@
       --neumorphic-shadow-hover: 4px 4px 8px #000000, -4px -4px 8px #222222;
       --neumorphic-shadow-pressed: inset 6px 6px 12px #000000, inset -6px -6px 12px #222222;
     }
-    
+
     .apple-theme {
       --primary-color: #0071e3;
       --secondary-color: #86868b;
@@ -82,7 +83,7 @@
       --neumorphic-shadow-hover: 4px 4px 8px #d5d5d5, -4px -4px 8px #ffffff;
       --neumorphic-shadow-pressed: inset 6px 6px 12px #d5d5d5, inset -6px -6px 12px #ffffff;
     }
-    
+
     .spotify-theme {
       --primary-color: #1db954;
       --secondary-color: #535353;
@@ -94,7 +95,7 @@
       --neumorphic-shadow-hover: 4px 4px 8px #000000, -4px -4px 8px #222222;
       --neumorphic-shadow-pressed: inset 6px 6px 12px #000000, inset -6px -6px 12px #222222;
     }
-    
+
     .microsoft-theme {
       --primary-color: #0078d4;
       --secondary-color: #f2f2f2;
@@ -106,14 +107,14 @@
       --neumorphic-shadow-hover: 4px 4px 8px #d3d2d1, -4px -4px 8px #ffffff;
       --neumorphic-shadow-pressed: inset 6px 6px 12px #d3d2d1, inset -6px -6px 12px #ffffff;
     }
-    
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: var(--font-primary);
     }
-    
+
     body {
       background-color: var(--background-color);
       color: var(--text-color);
@@ -122,7 +123,7 @@
       padding: 20px;
       transition: var(--transition);
     }
-    
+
     .container {
       max-width: 1200px;
       margin: 40px auto;
@@ -132,7 +133,7 @@
       background: var(--background-color);
       transition: var(--transition);
     }
-    
+
     .header {
       text-align: center;
       margin-bottom: 40px;
@@ -142,7 +143,7 @@
       background: var(--background-color);
       transition: var(--transition);
     }
-    
+
     .name {
       font-size: 3em;
       color: var(--primary-color);
@@ -155,7 +156,7 @@
       font-weight: 700;
       letter-spacing: -0.5px;
     }
-    
+
     .contact {
       display: flex;
       justify-content: center;
@@ -163,7 +164,7 @@
       flex-wrap: wrap;
       margin-top: 20px;
     }
-    
+
     .contact-info {
       padding: 15px 25px;
       border-radius: 50px;
@@ -174,17 +175,17 @@
       align-items: center;
       gap: 10px;
     }
-    
+
     .contact-info:hover {
       transform: translateY(-5px);
       box-shadow: var(--neumorphic-shadow-hover);
     }
-    
+
     .contact-info i {
       color: var(--primary-color);
       font-size: 1.2em;
     }
-    
+
     .section {
       margin-bottom: 30px;
       padding: 30px;
@@ -195,25 +196,25 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     .section:hover {
       box-shadow: var(--neumorphic-shadow-hover);
       transform: translateY(-3px);
     }
-    
+
     .section-header {
       display: flex;
       align-items: center;
       gap: 15px;
       margin-bottom: 25px;
       padding-bottom: 15px;
-      border-bottom: 1px solid rgba(0,0,0,0.1);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
-    
+
     .section-header i {
       font-size: 1.8em;
       color: var(--primary-color);
-      background: rgba(0,0,0,0.05);
+      background: rgba(0, 0, 0, 0.05);
       width: 50px;
       height: 50px;
       display: flex;
@@ -222,14 +223,14 @@
       border-radius: 50%;
       box-shadow: var(--neumorphic-shadow-inset);
     }
-    
+
     .section h2 {
       color: var(--primary-color);
       margin-bottom: 0;
       font-size: 1.8em;
       font-weight: 600;
     }
-    
+
     .about-text {
       padding: 20px;
       border-radius: var(--border-radius);
@@ -237,11 +238,11 @@
       background: var(--background-color);
       transition: var(--transition);
     }
-    
+
     .about-text:hover {
       box-shadow: var(--neumorphic-shadow-hover);
     }
-    
+
     .work-experience .job-item,
     .certifications .certification-item,
     .achievement .achievement-item {
@@ -254,14 +255,14 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     .work-experience .job-item:hover,
     .certifications .certification-item:hover,
     .achievement .achievement-item:hover {
       box-shadow: var(--neumorphic-shadow-hover);
       transform: translateX(5px);
     }
-    
+
     .work-experience .job-item h3,
     .certifications .certification-item,
     .achievement .achievement-item h3 {
@@ -271,19 +272,19 @@
       align-items: center;
       gap: 10px;
     }
-    
+
     .work-experience .job-item h3 i,
     .certifications .certification-item i,
     .achievement .achievement-item h3 i {
       font-size: 1.2em;
     }
-    
+
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 20px;
     }
-    
+
     .skill-item {
       padding: 15px;
       border-radius: var(--border-radius);
@@ -294,17 +295,17 @@
       align-items: center;
       gap: 10px;
     }
-    
+
     .skill-item:hover {
       box-shadow: var(--neumorphic-shadow-hover);
       transform: translateY(-3px);
     }
-    
+
     .skill-item i {
       color: var(--primary-color);
       font-size: 1.2em;
     }
-    
+
     .buttons-bar {
       position: fixed;
       bottom: 30px;
@@ -319,13 +320,14 @@
       z-index: 999;
       transition: var(--transition);
     }
-    
+
     .buttons-bar:hover {
       box-shadow: var(--neumorphic-shadow-hover);
       transform: translateY(-3px);
     }
-    
-    .buttons-bar button, .buttons-bar select {
+
+    .buttons-bar button,
+    .buttons-bar select {
       padding: 12px 20px;
       border: none;
       border-radius: 50px;
@@ -339,35 +341,44 @@
       align-items: center;
       gap: 10px;
     }
-    
-    .buttons-bar button:hover, .buttons-bar select:hover {
+
+    .buttons-bar button:hover,
+    .buttons-bar select:hover {
       box-shadow: var(--neumorphic-shadow-hover);
       transform: translateY(-3px);
       background: var(--primary-color);
       color: white;
     }
-    
-    .buttons-bar button:active, .buttons-bar select:active {
+
+    .buttons-bar button:active,
+    .buttons-bar select:active {
       box-shadow: var(--neumorphic-shadow-pressed);
       transform: translateY(1px);
     }
-    
+
     @keyframes sectionAnim {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    
+
     .animate-on-scroll {
       opacity: 0;
       transform: translateY(20px);
       transition: all 0.8s ease;
     }
-    
+
     .animate-on-scroll.visible {
       opacity: 1;
       transform: translateY(0);
     }
-    
+
     /* Theme specific overrides */
     .netflix-theme .name {
       background: linear-gradient(90deg, var(--primary-color), #ff0000);
@@ -375,60 +386,62 @@
       background-clip: text;
       color: transparent;
     }
-    
+
     .google-theme .name {
       background: linear-gradient(90deg, #4285f4, #ea4335, #fbbc05, #34a853);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
-    
+
     .dark-theme .name {
       background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
-    
+
     .spotify-theme .name {
       background: linear-gradient(90deg, var(--primary-color), #00c853);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
-    
+
     /* Responsive design */
     @media (max-width: 768px) {
       .container {
         padding: 20px;
         margin: 20px auto;
       }
-      
+
       .name {
         font-size: 2.2em;
       }
-      
+
       .section {
         padding: 20px;
       }
-      
+
       .skills-grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       }
-      
+
       .buttons-bar {
         bottom: 15px;
         right: 15px;
         padding: 10px;
       }
-      
-      .buttons-bar button, .buttons-bar select {
+
+      .buttons-bar button,
+      .buttons-bar select {
         padding: 10px 15px;
         font-size: 0.9em;
       }
     }
   </style>
 </head>
+
 <body>
   <div class="container" id="resume-content">
     <div class="header">
@@ -448,7 +461,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="section">
       <div class="section-header">
         <i class="fas fa-user"></i>
@@ -456,11 +469,15 @@
       </div>
       <div class="about">
         <div class="about-text animate-on-scroll">
-          <p>Detail-oriented and dedicated Quality Analyst with around 1.6+ years of experience in ensuring the quality and integrity of google ads. Proven ability to analyze, review, and enforce google guidelines while maintaining a positive user experience. Seeking to leverage expertise in content moderation and a strong understanding of digital communication to contribute to a dynamic team focused on enhancing online safety and community engagement. Skilled in building live trackers using advanced formulas and automating repetitive tasks using AI scripts to boost productivity. Proven track record of maintaining 99%+ quality standards. Proficient in RCA, reporting, training, and digital tools like Google Workspace and MS Office.</p>
+          <p>Great support and strong quality go hand in hand and I've spent my career proving it.
+            On the front lines at UnitedHealthcare and Amazon, I've guided customers through complex healthcare and account issues with empathy and precision, earning 100% NPS and consistently high CSAT. Behind the scenes as a Quality Analyst, I
+            audit Google Ads content, enforce platform policies, and maintain 99%+ accuracy all while building smart trackers and AI automations that free teams to focus on what matters.
+            Whether I'm coaching support agents, analyzing policy gaps, or designing workflows that prevent errors before they happen, my goal is the same: create digital experiences that are safe, seamless, and genuinely human. If your team values
+            quality, compliance, and customer-centric innovation, let's connect.</p>
         </div>
       </div>
     </div>
-    
+
     <div class="section">
       <div class="section-header">
         <i class="fas fa-briefcase"></i>
@@ -468,28 +485,47 @@
       </div>
       <div class="work-experience">
         <div class="job-item animate-on-scroll">
+          <h3><i class="fas fa-phone"></i> Advsor II - Concentrix</h3>
+          <p><strong>AUG 2025 – APR 2026</strong></p>
+          <p>My support journey started at Concentrix, partnering with UnitedHealthcare as a Senior Representative in Operations. I had the privilege of guiding Dual Special Needs members through complex healthcare needs balancing empathy, accuracy,
+            and strict compliance. That customer first approach kept me at a consistent 100% NPS and top tier CSAT scores. I later joined Amazon’s retail support team as an Advisor II, helping North American customers navigate account inquiries and
+            find fast, frictionless resolutions. At the end of the day, it’s simple: I’m here to create seamless, personalized experiences that keep satisfaction high and trust even stronger.</p>
+        </div>
+        <div class="job-item animate-on-scroll">
           <h3><i class="fas fa-star"></i> Senior Quality Reviewer - Cognizant</h3>
-          <p><strong>JAN 2024 – Present</strong></p>
-          <p>Mentored a team of 14 agents on a Generative AI project for client, ensuring consistent delivery of high-quality outputs with over 99% accuracy across all processes through daily feedback, detailed audits, and strict adherence to project guidelines and quality standards. Conducted refresher sessions to address performance gaps and align agents with evolving objectives, while organizing weekly Process Knowledge Tests (PKTs) to identify misalignments and deliver targeted training. Maintained comprehensive Root Cause Analysis (RCA) reports to track error trends and implement corrective measures. Prepared Weekly and Monthly Business Review (WBR/MBR), providing actionable insights into quality metrics and performance trends. As the project scaled to 130 agents, successfully managed a team of 16 Quality Analysts to uphold quality benchmarks. Currently leading the training of 38 raters for a new AI process, supporting team scalability and ensuring sustained quality assurance above 99%.</p>
+          <p><strong>JAN 2024 – AUG 2025</strong></p>
+          <p>I've had the chance to mentor and scale teams through some exciting AI-driven projects. I started by coaching a team of 14 agents on a Generative AI initiative, where daily feedback, detailed audits, and clear guidelines helped us
+            maintain 99%+ accuracy across all deliverables. To keep everyone aligned, I ran refresher sessions to close performance gaps and hosted weekly Process Knowledge Tests (PKTs) to spot misalignments early and deliver targeted training. I
+            also owned Root Cause Analysis (RCA) reporting to track error trends and drive fixes, plus prepared Weekly and Monthly Business Reviews (WBR/MBR) with actionable insights on quality and performance. As the project grew to 130 agents, I
+            stepped up to lead a team of 16 Quality Analysts to uphold our quality benchmarks. then on new project trained 38 raters for a new AI process focused on scalable onboarding and keeping quality assurance consistently above 99%.</p>
         </div>
         <div class="job-item animate-on-scroll">
           <h3><i class="fas fa-chart-line"></i> Senior Process Executive - Cognizant</h3>
-          <p><strong>APR 2023 – 2024</strong></p>
-          <p>Successfully transitioned across multiple new client projects, demonstrating strong adaptability and rapid learning of diverse process guidelines. Consistently executed tasks with over 99% accuracy, ensuring full compliance with client requirements and maintaining high-quality standards. Earned recognition from management for outstanding contributions and reliable performance in delivering top-tier results. Trained in emerging Generative AI workflows, showcasing proficiency in managing complex processes and meeting evolving client expectations. Collaborated effectively with cross-functional teams to align deliverables with project specifications, contributing to seamless operations and sustained process excellence.</p>
+          <p><strong>APR 2023 – JAN 2024</strong></p>
+          <p>I thrive in fast changing environments and I've successfully transitioned across multiple new client projects by quickly learning diverse process guidelines and adapting on the fly. No matter the scope, I've consistently delivered work
+            with 99%+ accuracy, staying fully aligned with client requirements and upholding high quality standards. That reliability earned me recognition from management for outstanding contributions and top tier results. I've also been trained in
+            emerging Generative AI workflows, which has sharpened my ability to manage complex, evolving processes while meeting shifting client expectations. And because great work rarely happens in silos, I collaborate closely with cross functional
+            teams to keep deliverables on-spec, operations seamless, and process excellence sustainable.</p>
         </div>
         <div class="job-item animate-on-scroll">
           <h3><i class="fas fa-tasks"></i> Process Executive - Cognizant</h3>
-          <p><strong>JAN 2022 – 2023</strong></p>
-          <p>Consistently achieved and maintained a 100% quality accuracy while exceeding productivity targets by over 120%, demonstrating exceptional efficiency and attention to detail. Performed all tasks in strict alignment with client's guidelines, ensuring full compliance with quality standards and project requirements. Earned multiple recognitions from team leaders for exemplary performance, reliability, and proactive support provided to new agents. Demonstrated a strong commitment to continuous improvement and operational excellence, significantly contributing to the overall success of the project. Actively collaborated with team members to share knowledge, provide guidance, and support the onboarding and development of new team members.</p>
+          <p><strong>JAN 2022 – APR 2023</strong></p>
+          <p>My journey began at Cognizant as a Process Analyst, where I quickly learned that precision and pace go hand in hand. I consistently maintained 100% quality accuracy while surpassing productivity targets by 120%+ all while staying
+            strictly aligned with client guidelines and compliance standards. That focus on excellence didn’t go unnoticed; I earned multiple leadership recognitions for reliability, proactive problem-solving, and the hands-on support I provided to
+            new agents. I’ve always believed in lifting the whole team, so I actively shared knowledge, guided onboarding, and mentored newcomers to help them ramp up faster. By championing continuous improvement and cross-team collaboration, I
+            helped drive sustained operational excellence and contributed directly to the project’s long-term success.</p>
         </div>
         <div class="job-item animate-on-scroll">
           <h3><i class="fas fa-ad"></i> Technical Manager - MIBHP</h3>
-          <p><strong>JUN 2021 – 2022</strong></p>
-          <p>Developed and executed strategic social media advertising campaigns that significantly enhanced brand visibility and contributed to increased product sales. Effectively managed lead stages and workflows within HubSpot CRM, optimizing lead nurturing processes and improving overall sales efficiency. Maintained and regularly updated the company website to ensure content accuracy, functionality, and a seamless user experience. Generated detailed reports and analytics to track campaign performance, providing actionable, data-driven insights that supported informed decision-making and continuous marketing optimization.</p>
+          <p><strong>JUN 2021 – JAN 2022</strong></p>
+          <p>I’ve built and launched strategic social media ad campaigns that didn’t just grab attention they drove real results, boosting brand visibility and directly contributing to increased product sales. Behind the scenes, I managed lead stages
+            and workflows in HubSpot CRM, streamlining nurturing processes and making the sales pipeline more efficient. I also kept our company website running smoothly, regularly updating content and troubleshooting functionality to ensure a
+            seamless, user friendly experience. To tie it all together, I tracked campaign performance through detailed analytics and reports, turning raw data into actionable insights that helped leadership make smarter decisions and continuously
+            optimize our marketing strategy.</p>
         </div>
       </div>
     </div>
-    
+
     <div class="section">
       <div class="section-header">
         <i class="fas fa-graduation-cap"></i>
@@ -506,7 +542,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="section">
       <div class="section-header">
         <i class="fas fa-certificate"></i>
@@ -547,7 +583,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="section">
       <div class="section-header">
         <i class="fas fa-lightbulb"></i>
@@ -588,7 +624,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="section">
       <div class="section-header">
         <i class="fas fa-tools"></i>
@@ -621,7 +657,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="section">
       <div class="section-header">
         <i class="fas fa-trophy"></i>
@@ -630,7 +666,7 @@
       <div class="achievement">
         <div class="achievement-item animate-on-scroll">
           <h3><i class="fas fa-medal"></i>The Helping Hand – Aug 2025</h3>
-          <p>Consistent  support  in the new WFs. Greatly appreciated for my ability to maintain quality accuracy over 98% even in challenging Situations, additionally my efforts in helping the Ops team in maintaining high standard of Quality.</p>
+          <p>Consistent support in the new WFs. Greatly appreciated for my ability to maintain quality accuracy over 98% even in challenging Situations, additionally my efforts in helping the Ops team in maintaining high standard of Quality.</p>
         </div>
         <div class="achievement-item animate-on-scroll">
           <h3><i class="fas fa-hands-helping"></i>Working as one – Mar 2025</h3>
@@ -639,7 +675,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="buttons-bar">
     <select id="theme-selector">
       <option value="default">🌐 Professional</option>
@@ -652,25 +688,25 @@
       <option value="microsoft">⊞ Microsoft</option>
     </select>
   </div>
-  
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Initialize theme from localStorage or default
       const savedTheme = localStorage.getItem('resume-theme') || 'default';
       applyTheme(savedTheme);
-      
+
       // Set the dropdown to the saved theme
       const themeSelector = document.getElementById('theme-selector');
       themeSelector.value = savedTheme;
-      
+
       // Theme selector change event
       themeSelector.addEventListener('change', function() {
         const selectedTheme = this.value;
         applyTheme(selectedTheme);
         localStorage.setItem('resume-theme', selectedTheme);
       });
-      
-      
+
+
       // Scroll animation
       function animateOnScroll() {
         const elements = document.querySelectorAll('.animate-on-scroll');
@@ -681,15 +717,15 @@
           }
         });
       }
-      
+
       window.addEventListener('scroll', animateOnScroll);
       window.addEventListener('load', animateOnScroll);
-      
+
       // Apply theme function
       function applyTheme(theme) {
         // Remove all theme classes
         document.body.className = '';
-        
+
         // Add the selected theme class if not default
         if (theme !== 'default') {
           document.body.classList.add(`${theme}-theme`);
@@ -698,4 +734,5 @@
     });
   </script>
 </body>
+
 </html>
