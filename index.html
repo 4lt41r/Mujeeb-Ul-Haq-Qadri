@@ -1,738 +1,868 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="default">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mujeeb Ul Haq Qadri - Resume</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    :root {
-      --primary-color: #2c3e50;
-      --secondary-color: #3498db;
-      --background-color: #f0f0f0;
-      --text-color: #333;
-      --font-primary: 'Poppins', sans-serif;
-      --neumorphic-shadow: 8px 8px 16px #d1d1d1, -8px -8px 16px #ffffff;
-      --neumorphic-shadow-inset: inset 4px 4px 8px #d1d1d1, inset -4px -4px 8px #ffffff;
-      --neumorphic-shadow-hover: 4px 4px 8px #d1d1d1, -4px -4px 8px #ffffff;
-      --neumorphic-shadow-pressed: inset 6px 6px 12px #d1d1d1, inset -6px -6px 12px #ffffff;
-      --border-radius: 20px;
-      --transition: all 0.3s ease;
-      /* Base font size fluid between 14px and 18px */
-      font-size: clamp(14px, 1.2vw + 0.5rem, 18px);
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mujeeb Ul Haq Qadri — Senior Quality Reviewer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;900&family=Bebas+Neue&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root,
+[data-theme="default"] {
+  --bg: #0a0a0f; --bg-2: #12121c;
+  --surface: rgba(255,255,255,0.04); --surface-2: rgba(255,255,255,0.07);
+  --fg: #f0f0f5; --muted: #8a8a9a;
+  --accent: #7c5cff; --accent-2: #00d4ff;
+  --glow: rgba(124,92,255,0.4); --grid: rgba(124,92,255,0.08);
+  --border: rgba(255,255,255,0.08);
+  --display-font: 'Space Grotesk', sans-serif;
+  --body-font: 'Inter', sans-serif;
+  --mono-font: 'JetBrains Mono', monospace;
+  --logo: "◆ M.Q.";
+}
+[data-theme="spotify"] {
+  --bg: #000; --bg-2: #0a0a0a;
+  --surface: rgba(29,185,84,0.06); --surface-2: rgba(29,185,84,0.10);
+  --fg: #fff; --muted: #b3b3b3;
+  --accent: #1db954; --accent-2: #1ed760;
+  --glow: rgba(29,185,84,0.5); --grid: rgba(29,185,84,0.06);
+  --border: rgba(255,255,255,0.08);
+  --display-font: 'Inter', sans-serif;
+  --body-font: 'Inter', sans-serif;
+  --mono-font: 'JetBrains Mono', monospace;
+  --logo: "♫ M.Q.";
+}
+[data-theme="netflix"] {
+  --bg: #000; --bg-2: #0a0000;
+  --surface: rgba(229,9,20,0.06); --surface-2: rgba(229,9,20,0.12);
+  --fg: #fff; --muted: #808080;
+  --accent: #e50914; --accent-2: #ff3b3b;
+  --glow: rgba(229,9,20,0.55); --grid: rgba(229,9,20,0.06);
+  --border: rgba(255,255,255,0.08);
+  --display-font: 'Bebas Neue', 'Inter', sans-serif;
+  --body-font: 'Inter', sans-serif;
+  --mono-font: 'JetBrains Mono', monospace;
+  --logo: "▶ M.Q.";
+}
+[data-theme="google"] {
+  --bg: #fff; --bg-2: #f8f9fa;
+  --surface: rgba(26,115,232,0.04); --surface-2: rgba(26,115,232,0.08);
+  --fg: #202124; --muted: #5f6368;
+  --accent: #1a73e8; --accent-2: #ea4335;
+  --glow: rgba(26,115,232,0.25); --grid: rgba(26,115,232,0.06);
+  --border: rgba(0,0,0,0.08);
+  --display-font: 'Space Grotesk', sans-serif;
+  --body-font: 'Inter', sans-serif;
+  --mono-font: 'JetBrains Mono', monospace;
+  --logo: "◉ M.Q.";
+}
+[data-theme="amazon"] {
+  --bg: #0f1111; --bg-2: #161a1d;
+  --surface: rgba(255,153,0,0.05); --surface-2: rgba(255,153,0,0.10);
+  --fg: #f3f3f3; --muted: #a8a8a8;
+  --accent: #ff9900; --accent-2: #00a8e1;
+  --glow: rgba(255,153,0,0.45); --grid: rgba(255,153,0,0.06);
+  --border: rgba(255,255,255,0.08);
+  --display-font: 'Inter', sans-serif;
+  --body-font: 'Inter', sans-serif;
+  --mono-font: 'JetBrains Mono', monospace;
+  --logo: "➤ M.Q.";
+}
+[data-theme="revolut"] {
+  --bg: #0a0a0a; --bg-2: #111;
+  --surface: rgba(0,117,235,0.06); --surface-2: rgba(0,212,255,0.10);
+  --fg: #fff; --muted: #8a8a8a;
+  --accent: #0075eb; --accent-2: #00d4ff;
+  --glow: rgba(0,117,235,0.5); --grid: rgba(0,212,255,0.05);
+  --border: rgba(255,255,255,0.08);
+  --display-font: 'Space Mono', monospace;
+  --body-font: 'Inter', sans-serif;
+  --mono-font: 'Space Mono', monospace;
+  --logo: "◢ M.Q.";
+}
 
-    .amazon-theme {
-      --primary-color: #ff9900;
-      --secondary-color: #232f3e;
-      --background-color: #f0f0f0;
-      --text-color: #333;
-      --font-primary: 'Space Grotesk', sans-serif;
-      --neumorphic-shadow: 8px 8px 16px #d1d1d1, -8px -8px 16px #ffffff;
-      --neumorphic-shadow-inset: inset 4px 4px 8px #d1d1d1, inset -4px -4px 8px #ffffff;
-      --neumorphic-shadow-hover: 4px 4px 8px #d1d1d1, -4px -4px 8px #ffffff;
-      --neumorphic-shadow-pressed: inset 6px 6px 12px #d1d1d1, inset -6px -6px 12px #ffffff;
-    }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--body-font); font-size: 16px; line-height: 1.6;
+  overflow-x: hidden; -webkit-font-smoothing: antialiased;
+  transition: background 0.6s ease, color 0.6s ease;
+}
+::selection { background: var(--accent); color: var(--bg); }
 
-    .netflix-theme {
-      --primary-color: #e50914;
-      --secondary-color: #f5f5f1;
-      --background-color: #141414;
-      --text-color: #ffffff;
-      --font-primary: 'Inter', sans-serif;
-      --neumorphic-shadow: 8px 8px 16px #0a0a0a, -8px -8px 16px #1e1e1e;
-      --neumorphic-shadow-inset: inset 4px 4px 8px #0a0a0a, inset -4px -4px 8px #1e1e1e;
-      --neumorphic-shadow-hover: 4px 4px 8px #0a0a0a, -4px -4px 8px #1e1e1e;
-      --neumorphic-shadow-pressed: inset 6px 6px 12px #0a0a0a, inset -6px -6px 12px #1e1e1e;
-    }
+.bg-layer {
+  position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  overflow: hidden; background: var(--bg);
+  transition: background 0.6s ease;
+}
+.bg-grid {
+  position: absolute; inset: -50%;
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 60px 60px;
+  transform: perspective(800px) rotateX(60deg) translateZ(-100px);
+  transform-origin: center center; opacity: 0.7;
+  animation: grid-flow 20s linear infinite;
+}
+@keyframes grid-flow {
+  from { background-position: 0 0; }
+  to   { background-position: 60px 60px; }
+}
+.bg-orb {
+  position: absolute; border-radius: 50%;
+  filter: blur(80px); opacity: 0.6;
+  transition: background 0.6s ease;
+}
+.bg-orb.o1 { width: 500px; height: 500px; background: var(--glow); top: -10%; left: -10%; }
+.bg-orb.o2 { width: 400px; height: 400px; background: var(--accent-2); bottom: -5%; right: -5%; opacity: 0.3; }
+.bg-noise {
+  position: absolute; inset: 0; opacity: 0.04; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' /%3E%3C/svg%3E");
+}
 
-    .google-theme {
-      --primary-color: #4285f4;
-      --secondary-color: #fbbc05;
-      --background-color: #f8f9fa;
-      --text-color: #333;
-      --font-primary: 'Inter', sans-serif;
-      --neumorphic-shadow: 8px 8px 16px #d8d8d8, -8px -8px 16px #ffffff;
-      --neumorphic-shadow-inset: inset 4px 4px 8px #d8d8d8, inset -4px -4px 8px #ffffff;
-      --neumorphic-shadow-hover: 4px 4px 8px #d8d8d8, -4px -4px 8px #ffffff;
-      --neumorphic-shadow-pressed: inset 6px 6px 12px #d8d8d8, inset -6px -6px 12px #ffffff;
-    }
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 40px;
+  background: linear-gradient(to bottom, var(--bg), transparent);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+}
+.logo {
+  font-family: var(--display-font); font-weight: 700; font-size: 18px;
+  letter-spacing: 0.05em; color: var(--fg);
+}
+.logo::before { content: var(--logo); color: var(--accent); margin-right: 4px; }
 
-    .dark-theme {
-      --primary-color: #bb86fc;
-      --secondary-color: #03dac6;
-      --background-color: #121212;
-      --text-color: #eaeaea;
-      --font-primary: 'Poppins', sans-serif;
-      --neumorphic-shadow: 8px 8px 16px #000000, -8px -8px 16px #222222;
-      --neumorphic-shadow-inset: inset 4px 4px 8px #000000, inset -4px -4px 8px #222222;
-      --neumorphic-shadow-hover: 4px 4px 8px #000000, -4px -4px 8px #222222;
-      --neumorphic-shadow-pressed: inset 6px 6px 12px #000000, inset -6px -6px 12px #222222;
-    }
+.theme-switch {
+  display: flex; gap: 4px; align-items: center;
+  background: var(--surface); border: 1px solid var(--border);
+  padding: 6px; border-radius: 100px; backdrop-filter: blur(10px);
+}
+.theme-switch button {
+  background: transparent; border: none; color: var(--muted);
+  font: 500 11px/1 var(--mono-font); padding: 6px 12px;
+  border-radius: 100px; cursor: pointer;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  transition: all 0.25s ease; display: flex; align-items: center; gap: 6px;
+}
+.theme-switch button:hover { color: var(--fg); }
+.theme-switch button.active {
+  color: var(--bg); background: var(--accent);
+  box-shadow: 0 0 20px var(--glow);
+}
+.theme-switch button .dot {
+  display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+}
+.theme-switch button[data-theme="default"] .dot { background: #7c5cff; }
+.theme-switch button[data-theme="spotify"] .dot { background: #1db954; }
+.theme-switch button[data-theme="netflix"] .dot { background: #e50914; }
+.theme-switch button[data-theme="google"] .dot { background: #1a73e8; }
+.theme-switch button[data-theme="amazon"] .dot { background: #ff9900; }
+.theme-switch button[data-theme="revolut"] .dot { background: #00d4ff; }
 
-    .apple-theme {
-      --primary-color: #0071e3;
-      --secondary-color: #86868b;
-      --background-color: #f5f5f7;
-      --text-color: #1d1d1f;
-      --font-primary: 'Poppins', sans-serif;
-      --neumorphic-shadow: 8px 8px 16px #d5d5d5, -8px -8px 16px #ffffff;
-      --neumorphic-shadow-inset: inset 4px 4px 8px #d5d5d5, inset -4px -4px 8px #ffffff;
-      --neumorphic-shadow-hover: 4px 4px 8px #d5d5d5, -4px -4px 8px #ffffff;
-      --neumorphic-shadow-pressed: inset 6px 6px 12px #d5d5d5, inset -6px -6px 12px #ffffff;
-    }
+.hero {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  padding: 120px 40px 80px; position: relative; perspective: 1200px;
+}
+.hero-content {
+  text-align: center; max-width: 1200px; transform-style: preserve-3d;
+}
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 8px 18px; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 100px;
+  font-family: var(--mono-font); font-size: 12px;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 32px;
+  transform: translateZ(40px);
+}
+.hero-tag::before {
+  content: ""; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 0 12px var(--accent);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+.hero-name {
+  font-family: var(--display-font); font-weight: 700;
+  font-size: clamp(48px, 11vw, 160px); line-height: 0.95;
+  letter-spacing: -0.04em; margin-bottom: 20px;
+  position: relative; transform-style: preserve-3d;
+}
+.hero-name .word {
+  display: inline-block; margin: 0 0.1em;
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.hero-name .word.outline {
+  -webkit-text-stroke: 2px var(--accent); color: transparent;
+}
+.hero-name .gradient {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+[data-theme="netflix"] .hero-name { text-transform: uppercase; letter-spacing: 0; }
 
-    .spotify-theme {
-      --primary-color: #1db954;
-      --secondary-color: #535353;
-      --background-color: #121212;
-      --text-color: #ffffff;
-      --font-primary: 'Poppins', sans-serif;
-      --neumorphic-shadow: 8px 8px 16px #000000, -8px -8px 16px #222222;
-      --neumorphic-shadow-inset: inset 4px 4px 8px #000000, inset -4px -4px 8px #222222;
-      --neumorphic-shadow-hover: 4px 4px 8px #000000, -4px -4px 8px #222222;
-      --neumorphic-shadow-pressed: inset 6px 6px 12px #000000, inset -6px -6px 12px #222222;
-    }
+.hero-role {
+  font-family: var(--mono-font); font-size: clamp(14px, 1.6vw, 18px);
+  color: var(--muted); letter-spacing: 0.3em; text-transform: uppercase;
+  margin-bottom: 40px; transform: translateZ(20px);
+}
+.hero-role span { color: var(--accent); }
+.hero-meta {
+  display: flex; justify-content: center; gap: 32px; flex-wrap: wrap;
+  font-family: var(--mono-font); font-size: 13px; color: var(--muted);
+  transform: translateZ(15px);
+}
+.hero-meta a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.hero-meta a:hover { color: var(--accent); }
+.hero-meta .sep { opacity: 0.4; }
 
-    .microsoft-theme {
-      --primary-color: #0078d4;
-      --secondary-color: #f2f2f2;
-      --background-color: #f3f2f1;
-      --text-color: #323130;
-      --font-primary: 'Poppins', sans-serif;
-      --neumorphic-shadow: 8px 8px 16px #d3d2d1, -8px -8px 16px #ffffff;
-      --neumorphic-shadow-inset: inset 4px 4px 8px #d3d2d1, inset -4px -4px 8px #ffffff;
-      --neumorphic-shadow-hover: 4px 4px 8px #d3d2d1, -4px -4px 8px #ffffff;
-      --neumorphic-shadow-pressed: inset 6px 6px 12px #d3d2d1, inset -6px -6px 12px #ffffff;
-    }
+.scroll-hint {
+  position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  font-family: var(--mono-font); font-size: 10px;
+  letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted);
+  animation: float 2.5s ease-in-out infinite;
+}
+.scroll-hint .arrow {
+  width: 1px; height: 30px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+}
+@keyframes float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: var(--font-primary);
-    }
+section {
+  padding: 100px 40px; position: relative;
+  max-width: 1200px; margin: 0 auto;
+}
+.section-label {
+  display: flex; align-items: center; gap: 16px;
+  font-family: var(--mono-font); font-size: 12px;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 16px;
+}
+.section-label::before {
+  content: ""; width: 40px; height: 1px; background: var(--accent);
+}
+.section-title {
+  font-family: var(--display-font); font-weight: 700;
+  font-size: clamp(36px, 6vw, 72px); line-height: 1;
+  letter-spacing: -0.03em; margin-bottom: 60px; max-width: 900px;
+}
+[data-theme="netflix"] .section-title { text-transform: uppercase; }
 
-    body {
-      background-color: var(--background-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      min-height: 100vh;
-      padding: 20px;
-      transition: var(--transition);
-    }
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;
+}
+.about-text { font-size: 19px; line-height: 1.7; color: var(--fg); }
+.about-text strong { color: var(--accent); font-weight: 600; }
 
-    .container {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 30px;
-      border-radius: var(--border-radius);
-      box-shadow: var(--neumorphic-shadow);
-      background: var(--background-color);
-      transition: var(--transition);
-    }
+.stats-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 16px; padding: 32px;
+  backdrop-filter: blur(20px);
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform;
+}
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.stat .num {
+  font-family: var(--display-font); font-weight: 700;
+  font-size: 48px; line-height: 1;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  margin-bottom: 4px;
+}
+.stat .lbl {
+  font-family: var(--mono-font); font-size: 11px;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
+}
 
-    .header {
-      text-align: center;
-      margin-bottom: 40px;
-      padding: 30px;
-      border-radius: var(--border-radius);
-      box-shadow: var(--neumorphic-shadow);
-      background: var(--background-color);
-      transition: var(--transition);
-    }
+.timeline { position: relative; padding-left: 40px; }
+.timeline::before {
+  content: ""; position: absolute; left: 8px; top: 12px; bottom: 12px;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--accent), var(--accent-2), transparent);
+}
+.job { position: relative; margin-bottom: 60px; perspective: 1000px; }
+.job::before {
+  content: ""; position: absolute; left: -36px; top: 24px;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--bg); border: 2px solid var(--accent);
+  box-shadow: 0 0 0 4px var(--bg), 0 0 20px var(--glow); z-index: 2;
+}
+.job-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 20px; padding: 32px; backdrop-filter: blur(20px);
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.3s;
+  will-change: transform;
+}
+.job-card:hover { border-color: var(--accent); }
+.job-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 20px; flex-wrap: wrap; gap: 8px;
+}
+.job-title {
+  font-family: var(--display-font); font-weight: 600;
+  font-size: 24px; letter-spacing: -0.02em;
+}
+.job-company { color: var(--accent); font-weight: 500; }
+.job-period {
+  font-family: var(--mono-font); font-size: 12px;
+  letter-spacing: 0.1em; color: var(--muted);
+  padding: 4px 12px; border: 1px solid var(--border);
+  border-radius: 100px; background: var(--bg);
+}
+.job-body p { margin-bottom: 14px; color: var(--fg); }
+.job-body p:last-child { margin-bottom: 0; }
+.job-body strong { color: var(--accent); }
+.job-metrics {
+  display: flex; gap: 16px; flex-wrap: wrap;
+  margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border);
+}
+.metric { font-family: var(--mono-font); font-size: 12px; }
+.metric .v { color: var(--accent); font-weight: 700; }
+.metric .l {
+  color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em;
+}
 
-    .name {
-      font-size: 3em;
-      color: var(--primary-color);
-      margin-bottom: 20px;
-      text-align: center;
-      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-    }
+.skills-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+.skill-cat {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 16px; padding: 28px; backdrop-filter: blur(20px);
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.3s;
+  will-change: transform;
+}
+.skill-cat:hover { border-color: var(--accent); }
+.skill-cat .cat-name {
+  font-family: var(--display-font); font-weight: 600;
+  font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+.skill-cat .cat-name::before {
+  content: ""; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 0 10px var(--accent);
+}
+.skill-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.skill-list li {
+  font-family: var(--mono-font); font-size: 13px; color: var(--fg);
+  padding: 8px 0; border-bottom: 1px dashed var(--border);
+  display: flex; align-items: center; gap: 10px;
+}
+.skill-list li::before { content: "▸"; color: var(--accent); font-size: 10px; }
+.skill-list li:last-child { border-bottom: none; }
 
-    .contact {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
+.awards-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+.award-card {
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%);
+  border: 1px solid var(--border); border-radius: 20px;
+  padding: 32px; position: relative; overflow: hidden;
+  backdrop-filter: blur(20px); transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform;
+}
+.award-card::before {
+  content: ""; position: absolute; top: -50%; right: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle, var(--glow) 0%, transparent 60%);
+  opacity: 0.4; pointer-events: none;
+}
+.award-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; border-radius: 12px;
+  background: var(--accent); color: var(--bg);
+  font-size: 24px; margin-bottom: 16px;
+  box-shadow: 0 8px 32px var(--glow);
+}
+.award-tag {
+  font-family: var(--mono-font); font-size: 11px;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 8px;
+}
+.award-title {
+  font-family: var(--display-font); font-weight: 700;
+  font-size: 22px; margin-bottom: 12px; letter-spacing: -0.01em;
+}
+.award-body { font-size: 14px; color: var(--muted); line-height: 1.6; }
 
-    .contact-info {
-      padding: 15px 25px;
-      border-radius: 50px;
-      box-shadow: var(--neumorphic-shadow);
-      background: var(--background-color);
-      transition: var(--transition);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+.combo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.edu-block { display: flex; flex-direction: column; gap: 20px; }
+.edu-item {
+  background: var(--surface); border-left: 3px solid var(--accent);
+  border-radius: 0 12px 12px 0; padding: 20px 24px;
+  transition: transform 0.3s ease;
+}
+.edu-item:hover { transform: translateX(8px); }
+.edu-item .deg {
+  font-family: var(--display-font); font-weight: 600;
+  font-size: 16px; margin-bottom: 4px;
+}
+.edu-item .school { color: var(--muted); font-size: 14px; margin-bottom: 4px; }
+.edu-item .yr {
+  font-family: var(--mono-font); font-size: 11px;
+  letter-spacing: 0.1em; color: var(--accent);
+}
 
-    .contact-info:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--neumorphic-shadow-hover);
-    }
+.certs-cloud { display: flex; flex-wrap: wrap; gap: 10px; }
+.cert-pill {
+  font-family: var(--mono-font); font-size: 12px;
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 100px; background: var(--surface); color: var(--fg);
+  transition: all 0.25s ease; cursor: default;
+}
+.cert-pill:hover {
+  border-color: var(--accent); color: var(--accent);
+  transform: translateY(-3px); box-shadow: 0 8px 24px var(--glow);
+}
 
-    .contact-info i {
-      color: var(--primary-color);
-      font-size: 1.2em;
-    }
+.contact { text-align: center; padding: 140px 40px; position: relative; }
+.contact-title {
+  font-family: var(--display-font); font-weight: 700;
+  font-size: clamp(40px, 7vw, 88px); line-height: 1;
+  letter-spacing: -0.03em; margin-bottom: 32px;
+}
+.contact-title .gradient {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.contact-cta {
+  display: inline-flex; align-items: center; gap: 14px;
+  padding: 18px 36px; background: var(--accent); color: var(--bg);
+  font-family: var(--display-font); font-weight: 600;
+  font-size: 18px; text-decoration: none; border-radius: 100px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 12px 40px var(--glow);
+}
+.contact-cta:hover {
+  transform: translateY(-4px); box-shadow: 0 20px 60px var(--glow);
+}
+.contact-cta .arrow { transition: transform 0.3s; }
+.contact-cta:hover .arrow { transform: translateX(4px); }
+.contact-links {
+  display: flex; justify-content: center; gap: 24px;
+  margin-top: 40px; flex-wrap: wrap;
+  font-family: var(--mono-font); font-size: 13px;
+}
+.contact-links a { color: var(--muted); text-decoration: none; transition: color 0.25s; }
+.contact-links a:hover { color: var(--accent); }
 
-    .section {
-      margin-bottom: 30px;
-      padding: 30px;
-      border-radius: var(--border-radius);
-      box-shadow: var(--neumorphic-shadow);
-      background: var(--background-color);
-      transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-    }
+footer {
+  padding: 40px; text-align: center;
+  font-family: var(--mono-font); font-size: 11px;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--muted); border-top: 1px solid var(--border);
+}
 
-    .section:hover {
-      box-shadow: var(--neumorphic-shadow-hover);
-      transform: translateY(-3px);
-    }
+.reveal {
+  opacity: 0; transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+              transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
 
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 25px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    }
+.reveal-stagger > * {
+  opacity: 0; transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1),
+              transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.reveal-stagger.in > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(2) { transition-delay: 0.15s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(3) { transition-delay: 0.25s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(4) { transition-delay: 0.35s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(5) { transition-delay: 0.45s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(6) { transition-delay: 0.55s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(7) { transition-delay: 0.65s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(8) { transition-delay: 0.75s; opacity: 1; transform: translateY(0); }
 
-    .section-header i {
-      font-size: 1.8em;
-      color: var(--primary-color);
-      background: rgba(0, 0, 0, 0.05);
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      box-shadow: var(--neumorphic-shadow-inset);
-    }
+@media (max-width: 768px) {
+  .nav { padding: 14px 16px; flex-wrap: wrap; gap: 10px; }
+  .theme-switch { padding: 4px; gap: 2px; }
+  .theme-switch button { padding: 6px 8px; font-size: 10px; }
+  .theme-switch button span:not(.dot) { display: none; }
+  section { padding: 60px 20px; }
+  .hero { padding: 100px 20px 60px; }
+  .hero-meta { gap: 12px; font-size: 11px; }
+  .about-grid, .combo-grid { grid-template-columns: 1fr; gap: 32px; }
+  .timeline { padding-left: 28px; }
+  .job::before { left: -24px; }
+  .job-card { padding: 24px; }
+  .job-title { font-size: 20px; }
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .stat .num { font-size: 36px; }
+}
 
-    .section h2 {
-      color: var(--primary-color);
-      margin-bottom: 0;
-      font-size: 1.8em;
-      font-weight: 600;
-    }
-
-    .about-text {
-      padding: 20px;
-      border-radius: var(--border-radius);
-      box-shadow: var(--neumorphic-shadow-inset);
-      background: var(--background-color);
-      transition: var(--transition);
-    }
-
-    .about-text:hover {
-      box-shadow: var(--neumorphic-shadow-hover);
-    }
-
-    .work-experience .job-item,
-    .certifications .certification-item,
-    .achievement .achievement-item {
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: var(--border-radius);
-      box-shadow: var(--neumorphic-shadow-inset);
-      background: var(--background-color);
-      transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .work-experience .job-item:hover,
-    .certifications .certification-item:hover,
-    .achievement .achievement-item:hover {
-      box-shadow: var(--neumorphic-shadow-hover);
-      transform: translateX(5px);
-    }
-
-    .work-experience .job-item h3,
-    .certifications .certification-item,
-    .achievement .achievement-item h3 {
-      color: var(--primary-color);
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .work-experience .job-item h3 i,
-    .certifications .certification-item i,
-    .achievement .achievement-item h3 i {
-      font-size: 1.2em;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 20px;
-    }
-
-    .skill-item {
-      padding: 15px;
-      border-radius: var(--border-radius);
-      box-shadow: var(--neumorphic-shadow-inset);
-      background: var(--background-color);
-      transition: var(--transition);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .skill-item:hover {
-      box-shadow: var(--neumorphic-shadow-hover);
-      transform: translateY(-3px);
-    }
-
-    .skill-item i {
-      color: var(--primary-color);
-      font-size: 1.2em;
-    }
-
-    .buttons-bar {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: var(--background-color);
-      border-radius: 50px;
-      padding: 15px;
-      box-shadow: var(--neumorphic-shadow);
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      z-index: 999;
-      transition: var(--transition);
-    }
-
-    .buttons-bar:hover {
-      box-shadow: var(--neumorphic-shadow-hover);
-      transform: translateY(-3px);
-    }
-
-    .buttons-bar button,
-    .buttons-bar select {
-      padding: 12px 20px;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      font-weight: 500;
-      background: var(--background-color);
-      color: var(--text-color);
-      box-shadow: var(--neumorphic-shadow);
-      transition: var(--transition);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .buttons-bar button:hover,
-    .buttons-bar select:hover {
-      box-shadow: var(--neumorphic-shadow-hover);
-      transform: translateY(-3px);
-      background: var(--primary-color);
-      color: white;
-    }
-
-    .buttons-bar button:active,
-    .buttons-bar select:active {
-      box-shadow: var(--neumorphic-shadow-pressed);
-      transform: translateY(1px);
-    }
-
-    @keyframes sectionAnim {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .animate-on-scroll {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.8s ease;
-    }
-
-    .animate-on-scroll.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Theme specific overrides */
-    .netflix-theme .name {
-      background: linear-gradient(90deg, var(--primary-color), #ff0000);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .google-theme .name {
-      background: linear-gradient(90deg, #4285f4, #ea4335, #fbbc05, #34a853);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .dark-theme .name {
-      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .spotify-theme .name {
-      background: linear-gradient(90deg, var(--primary-color), #00c853);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    /* Responsive design */
-    @media (max-width: 768px) {
-      .container {
-        padding: 20px;
-        margin: 20px auto;
-      }
-
-      .name {
-        font-size: 2.2em;
-      }
-
-      .section {
-        padding: 20px;
-      }
-
-      .skills-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      }
-
-      .buttons-bar {
-        bottom: 15px;
-        right: 15px;
-        padding: 10px;
-      }
-
-      .buttons-bar button,
-      .buttons-bar select {
-        padding: 10px 15px;
-        font-size: 0.9em;
-      }
-    }
-  </style>
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.2s !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
 </head>
-
 <body>
-  <div class="container" id="resume-content">
-    <div class="header">
-      <h1 class="name">Mujeeb Ul Haq Qadri</h1>
-      <div class="contact">
-        <div class="contact-info">
-          <i class="fas fa-envelope"></i>
-          <a href="mailto:syedmujeeb.qadri@gmail.com" style="text-decoration: none; color: inherit;">Email</a>
-        </div>
-        <div class="contact-info">
-          <i class="fas fa-phone"></i>
-          <a href="tel:+91-9596517957" style="text-decoration: none; color: inherit;">Phone</a>
-        </div>
-        <div class="contact-info">
-          <i class="fab fa-linkedin"></i>
-          <a href="https://www.linkedin.com/in/mujeeb-ul-haq-qadri-81796a161/" style="text-decoration: none; color: inherit;">LinkedIn</a>
-        </div>
-      </div>
-    </div>
 
-    <div class="section">
-      <div class="section-header">
-        <i class="fas fa-user"></i>
-        <h2>About Me</h2>
-      </div>
-      <div class="about">
-        <div class="about-text animate-on-scroll">
-          <p>Great support and strong quality go hand in hand and I've spent my career proving it.
-            On the front lines at UnitedHealthcare and Amazon, I've guided customers through complex healthcare and account issues with empathy and precision, earning 100% NPS and consistently high CSAT. Behind the scenes as a Quality Analyst, I
-            audit Google Ads content, enforce platform policies, and maintain 99%+ accuracy all while building smart trackers and AI automations that free teams to focus on what matters.
-            Whether I'm coaching support agents, analyzing policy gaps, or designing workflows that prevent errors before they happen, my goal is the same: create digital experiences that are safe, seamless, and genuinely human. If your team values
-            quality, compliance, and customer-centric innovation, let's connect.</p>
-        </div>
-      </div>
-    </div>
+<div class="bg-layer">
+  <div class="bg-grid"></div>
+  <div class="bg-orb o1" id="orb1"></div>
+  <div class="bg-orb o2" id="orb2"></div>
+  <div class="bg-noise"></div>
+</div>
 
-    <div class="section">
-      <div class="section-header">
-        <i class="fas fa-briefcase"></i>
-        <h2>Work Experience</h2>
-      </div>
-      <div class="work-experience">
-        <div class="job-item animate-on-scroll">
-          <h3><i class="fas fa-phone"></i> Advsor II - Concentrix</h3>
-          <p><strong>AUG 2025 – APR 2026</strong></p>
-          <p>My support journey started at Concentrix, partnering with UnitedHealthcare as a Senior Representative in Operations. I had the privilege of guiding Dual Special Needs members through complex healthcare needs balancing empathy, accuracy,
-            and strict compliance. That customer first approach kept me at a consistent 100% NPS and top tier CSAT scores. I later joined Amazon’s retail support team as an Advisor II, helping North American customers navigate account inquiries and
-            find fast, frictionless resolutions. At the end of the day, it’s simple: I’m here to create seamless, personalized experiences that keep satisfaction high and trust even stronger.</p>
-        </div>
-        <div class="job-item animate-on-scroll">
-          <h3><i class="fas fa-star"></i> Senior Quality Reviewer - Cognizant</h3>
-          <p><strong>JAN 2024 – AUG 2025</strong></p>
-          <p>I've had the chance to mentor and scale teams through some exciting AI-driven projects. I started by coaching a team of 14 agents on a Generative AI initiative, where daily feedback, detailed audits, and clear guidelines helped us
-            maintain 99%+ accuracy across all deliverables. To keep everyone aligned, I ran refresher sessions to close performance gaps and hosted weekly Process Knowledge Tests (PKTs) to spot misalignments early and deliver targeted training. I
-            also owned Root Cause Analysis (RCA) reporting to track error trends and drive fixes, plus prepared Weekly and Monthly Business Reviews (WBR/MBR) with actionable insights on quality and performance. As the project grew to 130 agents, I
-            stepped up to lead a team of 16 Quality Analysts to uphold our quality benchmarks. then on new project trained 38 raters for a new AI process focused on scalable onboarding and keeping quality assurance consistently above 99%.</p>
-        </div>
-        <div class="job-item animate-on-scroll">
-          <h3><i class="fas fa-chart-line"></i> Senior Process Executive - Cognizant</h3>
-          <p><strong>APR 2023 – JAN 2024</strong></p>
-          <p>I thrive in fast changing environments and I've successfully transitioned across multiple new client projects by quickly learning diverse process guidelines and adapting on the fly. No matter the scope, I've consistently delivered work
-            with 99%+ accuracy, staying fully aligned with client requirements and upholding high quality standards. That reliability earned me recognition from management for outstanding contributions and top tier results. I've also been trained in
-            emerging Generative AI workflows, which has sharpened my ability to manage complex, evolving processes while meeting shifting client expectations. And because great work rarely happens in silos, I collaborate closely with cross functional
-            teams to keep deliverables on-spec, operations seamless, and process excellence sustainable.</p>
-        </div>
-        <div class="job-item animate-on-scroll">
-          <h3><i class="fas fa-tasks"></i> Process Executive - Cognizant</h3>
-          <p><strong>JAN 2022 – APR 2023</strong></p>
-          <p>My journey began at Cognizant as a Process Analyst, where I quickly learned that precision and pace go hand in hand. I consistently maintained 100% quality accuracy while surpassing productivity targets by 120%+ all while staying
-            strictly aligned with client guidelines and compliance standards. That focus on excellence didn’t go unnoticed; I earned multiple leadership recognitions for reliability, proactive problem-solving, and the hands-on support I provided to
-            new agents. I’ve always believed in lifting the whole team, so I actively shared knowledge, guided onboarding, and mentored newcomers to help them ramp up faster. By championing continuous improvement and cross-team collaboration, I
-            helped drive sustained operational excellence and contributed directly to the project’s long-term success.</p>
-        </div>
-        <div class="job-item animate-on-scroll">
-          <h3><i class="fas fa-ad"></i> Technical Manager - MIBHP</h3>
-          <p><strong>JUN 2021 – JAN 2022</strong></p>
-          <p>I’ve built and launched strategic social media ad campaigns that didn’t just grab attention they drove real results, boosting brand visibility and directly contributing to increased product sales. Behind the scenes, I managed lead stages
-            and workflows in HubSpot CRM, streamlining nurturing processes and making the sales pipeline more efficient. I also kept our company website running smoothly, regularly updating content and troubleshooting functionality to ensure a
-            seamless, user friendly experience. To tie it all together, I tracked campaign performance through detailed analytics and reports, turning raw data into actionable insights that helped leadership make smarter decisions and continuously
-            optimize our marketing strategy.</p>
-        </div>
-      </div>
-    </div>
+<nav class="nav">
+  <div class="logo">MUJEEB.QADRI</div>
+  <div class="theme-switch" id="themeSwitch">
+    <button data-theme="default"><span class="dot"></span><span>default</span></button>
+    <button data-theme="spotify"><span class="dot"></span><span>spotify</span></button>
+    <button data-theme="netflix"><span class="dot"></span><span>netflix</span></button>
+    <button data-theme="google"><span class="dot"></span><span>google</span></button>
+    <button data-theme="amazon"><span class="dot"></span><span>amazon</span></button>
+    <button data-theme="revolut"><span class="dot"></span><span>revolut</span></button>
+  </div>
+</nav>
 
-    <div class="section">
-      <div class="section-header">
-        <i class="fas fa-graduation-cap"></i>
-        <h2>Education</h2>
-      </div>
-      <div class="work-experience animate-on-scroll">
-        <div class="job-item">
-          <h3><i class="fas fa-university"></i> B.Tech - Civil Engineering</h3>
-          <p>ARYANS GROUP OF COLLEGES, Chandigarh | 2017–2021</p>
-        </div>
-        <div class="job-item">
-          <h3><i class="fas fa-school"></i> Diploma - Civil Engineering</h3>
-          <p>Govt Polytechnic College, Ganderbal | 2012–2016</p>
-        </div>
-      </div>
+<header class="hero">
+  <div class="hero-content" id="heroContent">
+    <div class="hero-tag">Available for hire · Senior QA</div>
+    <h1 class="hero-name">
+      <span class="word">Mujeeb</span>
+      <span class="word outline">Ul Haq</span>
+      <span class="word gradient">Qadri.</span>
+    </h1>
+    <div class="hero-role">Senior <span>Quality</span> Reviewer</div>
+    <div class="hero-meta">
+      <span>Srinagar, J&amp;K</span>
+      <span class="sep">/</span>
+      <a href="tel:+919596517957">+91 9596517957</a>
+      <span class="sep">/</span>
+      <a href="mailto:Syedmujeeb.qadri@gmail.com">Syedmujeeb.qadri@gmail.com</a>
+      <span class="sep">/</span>
+      <a href="#" target="_blank">LinkedIn</a>
     </div>
+  </div>
+  <div class="scroll-hint">
+    <span>scroll</span>
+    <div class="arrow"></div>
+  </div>
+</header>
 
-    <div class="section">
-      <div class="section-header">
-        <i class="fas fa-certificate"></i>
-        <h2>Certifications</h2>
-      </div>
-      <div class="certifications">
-        <div class="certification-item animate-on-scroll">
-          <i class="fas fa-robot"></i>
-          <a href="https://drive.google.com/file/d/1plE1_duX6BkTTPmYfW-U7OZ7Ogcs1DRj/view?usp=drive_link" style="text-decoration: none; color: inherit;" target="_blank">Prompt Engineering</a>
-        </div>
-        <div class="certification-item animate-on-scroll">
-          <i class="fas fa-bullhorn"></i>
-          <a href="https://drive.google.com/drive/folders/1a08ADVIOlFzFyfk5qs4SMIzGFZavHACp?usp=drive_link" style="text-decoration: none; color: inherit;" target="_blank">Digital Marketing</a>
-        </div>
-        <div class="certification-item animate-on-scroll">
-          <i class="fas fa-brain"></i>
-          <a href="https://drive.google.com/drive/folders/1a2Odk6El08CkHN2X2y4FuftQVyJ5YOHv?usp=drive_link" style="text-decoration: none; color: inherit;" target="_blank">Generative AI</a>
-        </div>
-        <div class="certification-item animate-on-scroll">
-          <i class="fas fa-table"></i>
-          <a href="https://drive.google.com/drive/folders/1aVY9O7lMo0ooayurSO09lJhIZ2tBYsed?usp=drive_link" style="text-decoration: none; color: inherit;" target="_blank">MS Excel</a>
-        </div>
-        <div class="certification-item animate-on-scroll">
-          <i class="fas fa-chart-bar"></i>
-          <a href="https://drive.google.com/drive/folders/1a2HcapWKmz-bjd10d9n1lrvcQVYEdwmr?usp=drive_link" style="text-decoration: none; color: inherit;" target="_blank">Data Analysis</a>
-        </div>
-        <div class="certification-item animate-on-scroll">
-          <i class="fab fa-google"></i>
-          <a href="https://drive.google.com/file/d/1xQa0kZ2rWLj7k6PVxkYaXf731Vigta_-/view?usp=drive_link" style="text-decoration: none; color: inherit;" target="_blank">Google Ads</a>
-        </div>
-        <div class="certification-item animate-on-scroll">
-          <i class="fas fa-laptop-code"></i>
-          <a href="https://drive.google.com/drive/folders/1a0H6aVqD5xDx-3XqZ5Y06xz4lFrC7oTP?usp=drive_link" style="text-decoration: none; color: inherit;" target="_blank">Web Design</a>
-        </div>
-        <div class="certification-item animate-on-scroll">
-          <i class="fas fa-desktop"></i>
-          <a href="https://drive.google.com/file/d/1aDtLoaahkUMYuKWg3rmhseXRP1Qdy0gl/view?usp=drive_link" style="text-decoration: none; color: inherit;" target="_blank">Diploma in IT</a>
-        </div>
-      </div>
+<section id="about">
+  <div class="reveal">
+    <div class="section-label">01 / About</div>
+    <h2 class="section-title">3.5+ years driving <span style="color: var(--accent);">99%+ quality</span> on Google AI projects.</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p style="margin-bottom: 16px;">Results-driven Senior Quality Reviewer with hands-on experience in <strong>audits</strong>, <strong>team leadership</strong>, and process automation across high-impact Google projects.</p>
+      <p style="margin-bottom: 16px;">I build live trackers using advanced formulas and automate repetitive workflows with AI scripts to boost team productivity. Proven track record of maintaining <strong>99%+ quality standards</strong> while mentoring teams and delivering stakeholder reports.</p>
+      <p>Proficient in RCA, KPI reporting, training, and the digital tools that move the needle — Google Workspace, Apps Script, MS Office.</p>
     </div>
-
-    <div class="section">
-      <div class="section-header">
-        <i class="fas fa-lightbulb"></i>
-        <h2>Soft Skills</h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-item animate-on-scroll">
-          <i class="fas fa-search"></i>
-          <span>Attention to Detail</span>
-        </div>
-        <div class="skill-item animate-on-scroll">
-          <i class="fas fa-users"></i>
-          <span>Leadership</span>
-        </div>
-        <div class="skill-item animate-on-scroll">
-          <i class="fas fa-brain"></i>
-          <span>Analytical Thinking</span>
-        </div>
-        <div class="skill-item animate-on-scroll">
-          <i class="fas fa-clock"></i>
-          <span>Time Management</span>
-        </div>
-        <div class="skill-item animate-on-scroll">
-          <i class="fas fa-puzzle-piece"></i>
-          <span>Problem Solving</span>
-        </div>
-        <div class="skill-item animate-on-scroll">
-          <i class="fas fa-comments"></i>
-          <span>Communication Skills</span>
-        </div>
-        <div class="skill-item animate-on-scroll">
-          <i class="fas fa-sync-alt"></i>
-          <span>Adaptability</span>
-        </div>
-        <div class="skill-item animate-on-scroll">
-          <i class="fas fa-user-friends"></i>
-          <span>Team Management</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-header">
-        <i class="fas fa-tools"></i>
-        <h2>Core Skills</h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-item animate-on-scroll">
-          <i class="fas fa-clipboard-check"></i>
-          <span>Quality Assurance & Auditing</span>
-        </div>
-        <div class="skill-item animate-on-scroll">
-          <i class="fas fa-shield-alt"></i>
-          <span>Content Moderation</span>
-        </div>
-        <div class="skill-item animate-on-scroll">
-          <i class="fas fa-search-plus"></i>
-          <span>Root Cause Analysis (RCA)</span>
-        </div>
-        <div class="skill-item animate-on-scroll">
-          <i class="fas fa-chalkboard-teacher"></i>
-          <span>Team Training & Performance Coaching</span>
-        </div>
-        <div class="skill-item animate-on-scroll">
-          <i class="fas fa-sync"></i>
-          <span>Process Improvement</span>
-        </div>
-        <div class="skill-item animate-on-scroll">
-          <i class="fas fa-chart-pie"></i>
-          <span>KPI Reporting (WBR/MBR)</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-header">
-        <i class="fas fa-trophy"></i>
-        <h2><a href="https://drive.google.com/drive/folders/1flzpdjq2B4_IsCq36mMmc3qfS7_uwqzv?usp=drive_link" style="text-decoration: none; color: inherit;" target="_blank">Achievements</a></h2>
-      </div>
-      <div class="achievement">
-        <div class="achievement-item animate-on-scroll">
-          <h3><i class="fas fa-medal"></i>The Helping Hand – Aug 2025</h3>
-          <p>Consistent support in the new WFs. Greatly appreciated for my ability to maintain quality accuracy over 98% even in challenging Situations, additionally my efforts in helping the Ops team in maintaining high standard of Quality.</p>
-        </div>
-        <div class="achievement-item animate-on-scroll">
-          <h3><i class="fas fa-hands-helping"></i>Working as one – Mar 2025</h3>
-          <p>Maintained 99%+ accuracy in challenging tasks; recognized for consistent performance and support to Ops in upholding quality standards.</p>
-        </div>
+    <div class="stats-card tilt reveal">
+      <div class="stats-grid">
+        <div class="stat"><div class="num">99%+</div><div class="lbl">Quality Accuracy</div></div>
+        <div class="stat"><div class="num">+40%</div><div class="lbl">Productivity Lift</div></div>
+        <div class="stat"><div class="num">−35%</div><div class="lbl">Manual Errors</div></div>
+        <div class="stat"><div class="num">16</div><div class="lbl">QAs Led</div></div>
+        <div class="stat"><div class="num">120%</div><div class="lbl">Target Hit Rate</div></div>
+        <div class="stat"><div class="num">3.5+</div><div class="lbl">Years Experience</div></div>
       </div>
     </div>
   </div>
+</section>
 
-  <div class="buttons-bar">
-    <select id="theme-selector">
-      <option value="default">🌐 Professional</option>
-      <option value="amazon">🛒 Amazon</option>
-      <option value="netflix">🎬 Netflix</option>
-      <option value="google">🌈 Google</option>
-      <option value="dark">🌙 Dark Mode</option>
-      <option value="apple">🍎 Apple</option>
-      <option value="spotify">🎵 Spotify</option>
-      <option value="microsoft">⊞ Microsoft</option>
-    </select>
+<section id="experience">
+  <div class="reveal">
+    <div class="section-label">02 / Experience</div>
+    <h2 class="section-title">Where I've delivered.</h2>
   </div>
+  <div class="timeline">
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Initialize theme from localStorage or default
-      const savedTheme = localStorage.getItem('resume-theme') || 'default';
-      applyTheme(savedTheme);
+    <div class="job reveal">
+      <div class="job-card tilt">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Advisor II</div>
+            <div class="job-company">Concentrix</div>
+          </div>
+          <div class="job-period">Aug 2025 — Apr 2026</div>
+        </div>
+        <div class="job-body">
+          <p>Started in customer support at <strong>UnitedHealthcare</strong>, handling Dual Special Needs members while consistently maintaining a <strong>100% NPS score</strong> and strong CSAT through empathetic, accurate, and compliance-driven support.</p>
+          <p>Moved to the <strong>Amazon Retail Process</strong> as Advisor II, assisting North America customers with account-related queries — focused on efficient resolution, customer satisfaction, and high CSAT performance.</p>
+        </div>
+        <div class="job-metrics">
+          <div class="metric"><span class="v">100%</span> <span class="l">NPS</span></div>
+          <div class="metric"><span class="v">High</span> <span class="l">CSAT</span></div>
+          <div class="metric"><span class="v">HIPAA</span> <span class="l">Compliant</span></div>
+        </div>
+      </div>
+    </div>
 
-      // Set the dropdown to the saved theme
-      const themeSelector = document.getElementById('theme-selector');
-      themeSelector.value = savedTheme;
+    <div class="job reveal">
+      <div class="job-card tilt">
+        <div class="job-head">
+          <div>
+            <div class="job-title">Senior Quality Reviewer</div>
+            <div class="job-company">Cognizant</div>
+          </div>
+          <div class="job-period">Jan 2022 — Aug 2025</div>
+        </div>
+        <div class="job-body">
+          <p>Led a team of <strong>16 QAs</strong> on high-impact Google AI projects, ensuring <strong>99%+ accuracy</strong> across audits. Built dynamic dashboards and live trackers using advanced formulas, automating repetitive tasks and reporting with Google Apps Script — boosting team productivity by 40% and reducing manual errors by 35%.</p>
+          <p>Conducted <strong>RCA</strong>, performance coaching, and delivered weekly stakeholder reports (WBR/MBR) to drive continuous improvement and quality excellence. Adapted quickly across multiple Google processes, consistently achieving 99%+ task accuracy.</p>
+          <p>Streamlined daily operations through formula-based solutions and automation, improving efficiency by 30%. Trained peers on new workflows, ensured seamless transitions during project shifts, and earned recognition for performance and adaptability.</p>
+          <p>Maintained 100% quality and exceeded productivity targets by 120% while adhering to Google guidelines. Mentored new agents in a high-volume content moderation environment.</p>
+        </div>
+        <div class="job-metrics">
+          <div class="metric"><span class="v">+40%</span> <span class="l">Productivity</span></div>
+          <div class="metric"><span class="v">−35%</span> <span class="l">Errors</span></div>
+          <div class="metric"><span class="v">120%</span> <span class="l">Target</span></div>
+          <div class="metric"><span class="v">16</span> <span class="l">Team Size</span></div>
+        </div>
+      </div>
+    </div>
 
-      // Theme selector change event
-      themeSelector.addEventListener('change', function() {
-        const selectedTheme = this.value;
-        applyTheme(selectedTheme);
-        localStorage.setItem('resume-theme', selectedTheme);
-      });
+  </div>
+</section>
 
+<section id="skills">
+  <div class="reveal">
+    <div class="section-label">03 / Capabilities</div>
+    <h2 class="section-title">What I bring to the table.</h2>
+  </div>
+  <div class="skills-grid reveal-stagger">
 
-      // Scroll animation
-      function animateOnScroll() {
-        const elements = document.querySelectorAll('.animate-on-scroll');
-        elements.forEach(el => {
-          const top = el.getBoundingClientRect().top;
-          if (top < window.innerHeight - 50) {
-            el.classList.add('visible');
-          }
-        });
-      }
+    <div class="skill-cat tilt">
+      <div class="cat-name">Core Skills</div>
+      <ul class="skill-list">
+        <li>Quality Assurance &amp; Auditing</li>
+        <li>HIPAA Compliance</li>
+        <li>Root Cause Analysis (RCA)</li>
+        <li>Team Training &amp; Coaching</li>
+        <li>Process Improvement</li>
+        <li>KPI Reporting (WBR/MBR)</li>
+      </ul>
+    </div>
 
-      window.addEventListener('scroll', animateOnScroll);
-      window.addEventListener('load', animateOnScroll);
+    <div class="skill-cat tilt">
+      <div class="cat-name">Tools &amp; Tech</div>
+      <ul class="skill-list">
+        <li>Google Workspace</li>
+        <li>Google Apps Script</li>
+        <li>MS Excel (Advanced)</li>
+        <li>MS Office Suite</li>
+        <li>Live Dashboards</li>
+        <li>AI Scripts &amp; Automation</li>
+      </ul>
+    </div>
 
-      // Apply theme function
-      function applyTheme(theme) {
-        // Remove all theme classes
-        document.body.className = '';
+    <div class="skill-cat tilt">
+      <div class="cat-name">Soft Skills</div>
+      <ul class="skill-list">
+        <li>Attention to Detail</li>
+        <li>Leadership</li>
+        <li>Team Management</li>
+        <li>Analytical Thinking</li>
+        <li>Time Management</li>
+        <li>Problem Solving</li>
+        <li>Communication</li>
+        <li>Adaptability</li>
+      </ul>
+    </div>
 
-        // Add the selected theme class if not default
-        if (theme !== 'default') {
-          document.body.classList.add(`${theme}-theme`);
-        }
-      }
+  </div>
+</section>
+
+<section id="awards">
+  <div class="reveal">
+    <div class="section-label">04 / Recognition</div>
+    <h2 class="section-title">Performance awards.</h2>
+  </div>
+  <div class="awards-grid reveal-stagger">
+
+    <div class="award-card tilt">
+      <div class="award-icon">★</div>
+      <div class="award-tag">Performance Award · Aug 2025</div>
+      <div class="award-title">The Helping Hand</div>
+      <div class="award-body">Consistent support on new workflows. Recognized for maintaining quality accuracy over 98% even in challenging situations, plus efforts in helping the Ops team uphold high quality standards.</div>
+    </div>
+
+    <div class="award-card tilt">
+      <div class="award-icon">◆</div>
+      <div class="award-tag">Performance Award · Mar 2025</div>
+      <div class="award-title">Working as One</div>
+      <div class="award-body">Maintained 99%+ accuracy on challenging tasks. Recognized for consistent performance and support to the Ops team in upholding quality standards.</div>
+    </div>
+
+  </div>
+</section>
+
+<section id="education">
+  <div class="reveal">
+    <div class="section-label">05 / Education &amp; Certifications</div>
+    <h2 class="section-title">The foundation.</h2>
+  </div>
+  <div class="combo-grid">
+
+    <div class="edu-block reveal-stagger">
+      <div class="edu-item">
+        <div class="deg">B.Tech, Civil Engineering</div>
+        <div class="school">Aryans Group of Colleges, Chandigarh</div>
+        <div class="yr">2017 — 2021</div>
+      </div>
+      <div class="edu-item">
+        <div class="deg">Diploma, Civil Engineering</div>
+        <div class="school">Govt Polytechnic College, Ganderbal</div>
+        <div class="yr">2012 — 2016</div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div style="font-family: var(--display-font); font-weight: 600; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px;">Certifications</div>
+      <div class="certs-cloud">
+        <span class="cert-pill">Prompt Engineering</span>
+        <span class="cert-pill">Generative AI</span>
+        <span class="cert-pill">Digital Marketing</span>
+        <span class="cert-pill">MS Excel</span>
+        <span class="cert-pill">Data Analysis</span>
+        <span class="cert-pill">Google Ads</span>
+        <span class="cert-pill">Web Design</span>
+        <span class="cert-pill">Diploma in IT</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="reveal">
+    <div class="section-label" style="justify-content: center;">06 / Get in touch</div>
+    <h1 class="contact-title">Let's build something <span class="gradient">together.</span></h1>
+    <a class="contact-cta" href="mailto:Syedmujeeb.qadri@gmail.com?subject=Let's%20talk">
+      <span>Reach out</span>
+      <span class="arrow">→</span>
+    </a>
+    <div class="contact-links">
+      <a href="mailto:Syedmujeeb.qadri@gmail.com">Syedmujeeb.qadri@gmail.com</a>
+      <span style="color: var(--muted); opacity: 0.4;">/</span>
+      <a href="tel:+919596517957">+91 9596517957</a>
+      <span style="color: var(--muted); opacity: 0.4;">/</span>
+      <a href="#" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Mujeeb Ul Haq Qadri · Built with care, no plugins, no fluff</footer>
+
+<script>
+const themeSwitch = document.getElementById('themeSwitch');
+const buttons = themeSwitch.querySelectorAll('button');
+
+function applyTheme(name) {
+  document.documentElement.setAttribute('data-theme', name);
+  buttons.forEach(b => b.classList.toggle('active', b.dataset.theme === name));
+  try { localStorage.setItem('mq-theme', name); } catch(e) {}
+}
+buttons.forEach(b => b.addEventListener('click', () => applyTheme(b.dataset.theme)));
+
+try {
+  applyTheme(localStorage.getItem('mq-theme') || 'default');
+} catch(e) {
+  applyTheme('default');
+}
+
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+
+const heroContent = document.getElementById('heroContent');
+const orb1 = document.getElementById('orb1');
+const orb2 = document.getElementById('orb2');
+const bgGrid = document.querySelector('.bg-grid');
+
+let ticking = false;
+function onScroll() {
+  if (ticking) return;
+  ticking = true;
+  requestAnimationFrame(() => {
+    const y = window.scrollY;
+    const vh = window.innerHeight;
+
+    if (heroContent && y < vh) {
+      const p = y / vh;
+      heroContent.style.transform = `translateY(${y * 0.4}px) scale(${1 - p * 0.08})`;
+      heroContent.style.opacity = `${1 - p * 1.2}`;
+    }
+    if (orb1) orb1.style.transform = `translate(${y * 0.08}px, ${y * 0.15}px)`;
+    if (orb2) orb2.style.transform = `translate(${-y * 0.06}px, ${-y * 0.1}px)`;
+    if (bgGrid) {
+      bgGrid.style.transform = `perspective(800px) rotateX(60deg) translateZ(-100px) translateY(${y * 0.3}px)`;
+    }
+    ticking = false;
+  });
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+
+function bindTilt(el) {
+  let raf;
+  el.addEventListener('mousemove', (e) => {
+    const r = el.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(() => {
+      el.style.transform = `perspective(1000px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateZ(10px)`;
     });
-  </script>
-</body>
+  });
+  el.addEventListener('mouseleave', () => {
+    cancelAnimationFrame(raf);
+    el.style.transform = '';
+  });
+}
 
+if (!window.matchMedia('(hover: none)').matches) {
+  document.querySelectorAll('.tilt').forEach(bindTilt);
+
+  const heroSection = document.querySelector('.hero');
+  const words = document.querySelectorAll('.hero-name .word');
+
+  heroSection.addEventListener('mousemove', (e) => {
+    const r = heroSection.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    words.forEach((w, i) => {
+      const depth = (i + 1) * 8;
+      w.style.transform = `translate3d(${x * depth}px, ${y * depth}px, ${depth * 2}px) rotateY(${x * 6}deg) rotateX(${-y * 4}deg)`;
+    });
+  });
+  heroSection.addEventListener('mouseleave', () => {
+    words.forEach(w => w.style.transform = '');
+  });
+}
+</script>
+</body>
 </html>
