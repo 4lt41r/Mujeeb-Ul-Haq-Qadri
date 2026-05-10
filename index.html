@@ -491,21 +491,186 @@ footer {
 .reveal-stagger.in > *:nth-child(7) { transition-delay: 0.65s; opacity: 1; transform: translateY(0); }
 .reveal-stagger.in > *:nth-child(8) { transition-delay: 0.75s; opacity: 1; transform: translateY(0); }
 
+/* ─── Tablet ────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .nav { padding: 16px 24px; }
+  section { padding: 80px 24px; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .combo-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* ─── Mobile ────────────────────────────────────────── */
 @media (max-width: 768px) {
-  .nav { padding: 14px 16px; flex-wrap: wrap; gap: 10px; }
-  .theme-switch { padding: 4px; gap: 2px; }
-  .theme-switch button { padding: 6px 8px; font-size: 10px; }
+  body { font-size: 15px; }
+
+  /* Nav: stack logo and theme switcher cleanly */
+  .nav {
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .logo { font-size: 14px; flex-shrink: 0; }
+  .theme-switch {
+    padding: 3px;
+    gap: 0;
+    flex: 1;
+    justify-content: flex-end;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .theme-switch::-webkit-scrollbar { display: none; }
+  .theme-switch button {
+    padding: 6px 7px;
+    font-size: 9px;
+    flex-shrink: 0;
+  }
   .theme-switch button span:not(.dot) { display: none; }
+  .theme-switch button .dot { width: 10px; height: 10px; margin: 0; }
+
+  /* Hero: tighter spacing, smaller name, no perspective wobble */
+  .hero {
+    padding: 90px 20px 100px;
+    min-height: 90vh;
+    perspective: none;
+  }
+  .hero-tag {
+    font-size: 10px;
+    padding: 6px 14px;
+    letter-spacing: 0.1em;
+    margin-bottom: 24px;
+    transform: none;
+  }
+  .hero-name {
+    font-size: clamp(40px, 14vw, 72px);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  .hero-name .word { margin: 0 0.05em; }
+  .hero-name .word.outline { -webkit-text-stroke-width: 1.5px; }
+  .hero-role {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    margin-bottom: 24px;
+    transform: none;
+  }
+  .hero-meta {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 12px;
+    transform: none;
+  }
+  .hero-meta .sep { display: none; }
+  .scroll-hint { bottom: 24px; font-size: 9px; }
+  .scroll-hint .arrow { height: 22px; }
+
+  /* Sections */
   section { padding: 60px 20px; }
-  .hero { padding: 100px 20px 60px; }
-  .hero-meta { gap: 12px; font-size: 11px; }
-  .about-grid, .combo-grid { grid-template-columns: 1fr; gap: 32px; }
-  .timeline { padding-left: 28px; }
-  .job::before { left: -24px; }
-  .job-card { padding: 24px; }
-  .job-title { font-size: 20px; }
-  .stats-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
-  .stat .num { font-size: 36px; }
+  .section-label { font-size: 10px; letter-spacing: 0.2em; gap: 12px; }
+  .section-label::before { width: 24px; }
+  .section-title {
+    font-size: clamp(28px, 8vw, 44px);
+    margin-bottom: 36px;
+  }
+
+  /* About */
+  .about-text { font-size: 16px; }
+  .stats-card { padding: 24px; }
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 18px; }
+  .stat .num { font-size: 32px; }
+  .stat .lbl { font-size: 9px; }
+
+  /* Timeline + jobs */
+  .timeline { padding-left: 24px; }
+  .timeline::before { left: 6px; }
+  .job { margin-bottom: 36px; }
+  .job::before {
+    left: -22px;
+    top: 20px;
+    width: 12px;
+    height: 12px;
+  }
+  .job-card { padding: 20px; border-radius: 14px; }
+  .job-head { gap: 6px; margin-bottom: 14px; }
+  .job-title { font-size: 18px; }
+  .job-period { font-size: 10px; padding: 3px 9px; }
+  .job-body p { font-size: 14px; margin-bottom: 10px; }
+  .job-metrics { gap: 10px 14px; padding-top: 14px; margin-top: 14px; }
+  .metric { font-size: 11px; }
+
+  /* Skills */
+  .skills-grid { grid-template-columns: 1fr; gap: 16px; }
+  .skill-cat { padding: 22px; }
+  .skill-cat .cat-name { font-size: 12px; }
+  .skill-list li { font-size: 12px; padding: 6px 0; }
+
+  /* Awards */
+  .awards-grid { grid-template-columns: 1fr; gap: 16px; }
+  .award-card { padding: 24px; }
+  .award-icon { width: 40px; height: 40px; font-size: 20px; margin-bottom: 12px; }
+  .award-title { font-size: 18px; }
+  .award-body { font-size: 13px; }
+
+  /* Education */
+  .edu-item { padding: 16px 18px; }
+  .edu-item .deg { font-size: 15px; }
+  .edu-item .school { font-size: 13px; }
+  .cert-pill { font-size: 11px; padding: 6px 12px; }
+
+  /* Contact */
+  .contact { padding: 80px 20px; }
+  .contact-title {
+    font-size: clamp(32px, 9vw, 48px);
+    margin-bottom: 24px;
+  }
+  .contact-cta {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+  .contact-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 28px;
+    font-size: 12px;
+  }
+  .contact-links span { display: none; }
+
+  footer {
+    padding: 28px 20px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+
+  /* Simplify ambient bg on mobile — orbs are huge and fuzzy on small screens */
+  .bg-orb.o1 { width: 320px; height: 320px; filter: blur(60px); }
+  .bg-orb.o2 { width: 280px; height: 280px; filter: blur(60px); }
+  .bg-grid { background-size: 40px 40px; opacity: 0.5; }
+}
+
+/* ─── Small phones ──────────────────────────────────── */
+@media (max-width: 380px) {
+  .logo { font-size: 12px; }
+  .theme-switch button { padding: 5px 6px; }
+  .theme-switch button .dot { width: 8px; height: 8px; }
+  .hero-name { font-size: clamp(36px, 13vw, 56px); }
+  .stats-grid { grid-template-columns: 1fr; }
+  .stat .num { font-size: 28px; }
+}
+
+/* ─── Touch devices: kill all hover-only effects ────── */
+@media (hover: none) {
+  .tilt:hover { transform: none !important; }
+  .edu-item:hover { transform: none; }
+  .cert-pill:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--border);
+    color: var(--fg);
+  }
+  .contact-cta:hover {
+    transform: none;
+    box-shadow: 0 12px 40px var(--glow);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -554,7 +719,7 @@ footer {
       <span class="sep">/</span>
       <a href="mailto:Syedmujeeb.qadri@gmail.com">Syedmujeeb.qadri@gmail.com</a>
       <span class="sep">/</span>
-      <a href="https://www.linkedin.com/in/mujeeb-ul-haq-qadri-81796a161/" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/mujeeb-ul-haq-qadri-81796a161/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
   <div class="scroll-hint">
@@ -764,7 +929,7 @@ footer {
       <span style="color: var(--muted); opacity: 0.4;">/</span>
       <a href="tel:+919596517957">+91 9596517957</a>
       <span style="color: var(--muted); opacity: 0.4;">/</span>
-      <a href="https://www.linkedin.com/in/mujeeb-ul-haq-qadri-81796a161/" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/mujeeb-ul-haq-qadri-81796a161/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
 </section>
@@ -803,6 +968,8 @@ const heroContent = document.getElementById('heroContent');
 const orb1 = document.getElementById('orb1');
 const orb2 = document.getElementById('orb2');
 const bgGrid = document.querySelector('.bg-grid');
+const isMobile = window.matchMedia('(max-width: 768px)').matches;
+const parallaxScale = isMobile ? 0.5 : 1;
 
 let ticking = false;
 function onScroll() {
@@ -814,13 +981,13 @@ function onScroll() {
 
     if (heroContent && y < vh) {
       const p = y / vh;
-      heroContent.style.transform = `translateY(${y * 0.4}px) scale(${1 - p * 0.08})`;
+      heroContent.style.transform = `translateY(${y * 0.3 * parallaxScale}px) scale(${1 - p * 0.06})`;
       heroContent.style.opacity = `${1 - p * 1.2}`;
     }
-    if (orb1) orb1.style.transform = `translate(${y * 0.08}px, ${y * 0.15}px)`;
-    if (orb2) orb2.style.transform = `translate(${-y * 0.06}px, ${-y * 0.1}px)`;
+    if (orb1) orb1.style.transform = `translate(${y * 0.08 * parallaxScale}px, ${y * 0.15 * parallaxScale}px)`;
+    if (orb2) orb2.style.transform = `translate(${-y * 0.06 * parallaxScale}px, ${-y * 0.1 * parallaxScale}px)`;
     if (bgGrid) {
-      bgGrid.style.transform = `perspective(800px) rotateX(60deg) translateZ(-100px) translateY(${y * 0.3}px)`;
+      bgGrid.style.transform = `perspective(800px) rotateX(60deg) translateZ(-100px) translateY(${y * 0.3 * parallaxScale}px)`;
     }
     ticking = false;
   });
