@@ -243,13 +243,8 @@
     .mini-card { min-height: 100px; padding: 17px; border-radius: 24px; border: 1px solid var(--line); background: color-mix(in srgb, var(--bg) 43%, transparent); backdrop-filter: blur(16px); }
     .mini-card strong { display: block; font-size: 27px; margin-bottom: 7px; }
     .mini-card span { color: var(--muted); font-size: 12px; line-height: 1.45; }
-    .float-card { position: absolute; z-index: 5; width: min(265px, 50%); padding: 17px; border: 1px solid var(--line); border-radius: 24px; background: color-mix(in srgb, var(--bg-2) 84%, transparent); backdrop-filter: blur(18px); box-shadow: 0 20px 70px rgba(0,0,0,.32); animation: floatCard 6s ease-in-out infinite; }
-    .float-card.one { top: 4px; left: 4px; }
-    .float-card.two { right: 0; bottom: 16px; animation-direction: reverse; animation-duration: 7s; }
-    .float-card b { display: block; margin-bottom: 7px; font-size: 14px; }
-    .float-card small { display: block; color: var(--muted); line-height: 1.45; }
-    @keyframes floatCard { 0%,100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-16px) rotate(1.3deg); } }
-
+    .float-card { position: absolute; z-index: 5; width: min(265px, 100%); padding: 17px; border: 1px solid var(--line); border-radius: 24px; background: color-mix(in srgb, var(--bg-2) 84%, transparent); backdrop-filter: blur(18px); box-shadow: 0 20px 70px rgba(0,0,0,.32); animation: floatCard 6s ease-in-out infinite; }
+    
     .section-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(250px, 430px); gap: 28px; align-items: end; margin-bottom: 34px; }
     .tag { display: inline-flex; margin-bottom: 14px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--soft); background: color-mix(in srgb, var(--panel) 70%, transparent); font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: 1.5px; }
     h2 { font-size: clamp(32px, 4.8vw, 58px); line-height: 1.02; letter-spacing: -2.2px; }
@@ -475,7 +470,7 @@
         </div>
 
         <div class="hero-stage reveal" aria-label="Interactive 3D profile card">
-          <div class="float-card one" data-parallax=".18"><b>Recruiter Mode</b><small>3+ years in quality audits, RCA, reporting, coaching and AI operations.</small></div>
+          
           <div class="holo-card tilt-card" data-parallax=".06">
             <div class="profile-content">
               <div class="profile-top">
@@ -491,7 +486,7 @@
               </div>
             </div>
           </div>
-          <div class="float-card two" data-parallax="-.14"><b>White Belt Mindset</b><small>Improve the process, not just the spreadsheet. Although I do like the spreadsheet.</small></div>
+          
         </div>
       </div>
     </section>
